@@ -1,0 +1,371 @@
+2025-04-25 15:14:26,314 - INFO - Summarizer started
+2025-04-25 15:14:26,314 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:14:26,454 - INFO - Report 生成器启动
+2025-04-25 15:14:26,454 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:14:26,454 - INFO - Report 生成器完成
+2025-04-25 15:14:54,301 - INFO - Summarizer started
+2025-04-25 15:14:54,301 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:14:54,441 - INFO - Report 生成器启动
+2025-04-25 15:14:54,441 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:14:54,441 - INFO - Report 生成器完成
+2025-04-25 15:14:57,738 - INFO - Summarizer started
+2025-04-25 15:14:57,738 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:14:57,879 - INFO - Report 生成器启动
+2025-04-25 15:14:57,879 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:14:57,879 - INFO - Report 生成器完成
+2025-04-25 15:15:29,789 - INFO - Scraper started
+2025-04-25 15:15:30,797 - ERROR - Failed fetching blog entries: 404 Client Error: Not Found for url: https://huggingface.co/blog/rss.xml
+2025-04-25 15:15:46,636 - INFO - Chunker/Indexer 启动
+2025-04-25 15:15:46,637 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 15:15:46,639 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 15:15:47,855 - INFO - Summarizer started
+2025-04-25 15:15:47,856 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:15:47,975 - INFO - Report 生成器启动
+2025-04-25 15:15:47,976 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:15:47,977 - INFO - Report 生成器完成
+2025-04-25 15:16:53,915 - INFO - Scraper started
+2025-04-25 15:16:55,418 - INFO - No new blog entries today
+2025-04-25 15:16:55,418 - INFO - Scraper finished
+2025-04-25 15:17:04,631 - INFO - Chunker/Indexer 启动
+2025-04-25 15:17:04,633 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 15:17:04,634 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 15:17:05,858 - INFO - Summarizer started
+2025-04-25 15:17:05,859 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:17:05,977 - INFO - Report 生成器启动
+2025-04-25 15:17:05,977 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:17:05,978 - INFO - Report 生成器完成
+2025-04-25 15:24:12,674 - INFO - ViewReport 模块启动
+2025-04-25 15:28:30,388 - INFO - ViewReport 模块结束
+2025-04-25 15:28:34,011 - INFO - ViewReport 模块启动
+2025-04-25 15:28:37,787 - INFO - Running: python scraper.py --date 2025-04-23
+2025-04-25 15:28:38,126 - INFO - Scraper started for date: 2025-04-23
+2025-04-25 15:28:39,795 - INFO - No blog entries to save for date: 2025-04-23
+2025-04-25 15:28:39,795 - INFO - Scraper finished
+2025-04-25 15:28:39,827 - INFO - Running: python chunker_indexer.py --date 2025-04-23
+2025-04-25 15:28:48,869 - INFO - Chunker/Indexer 启动
+2025-04-25 15:28:48,870 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 15:28:48,871 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 15:28:49,775 - INFO - Running: python summarizer.py --date 2025-04-23
+2025-04-25 15:28:50,057 - INFO - Summarizer started
+2025-04-25 15:28:50,057 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:28:50,085 - INFO - Running: python report.py --date 2025-04-23
+2025-04-25 15:28:50,169 - INFO - Report 生成器启动
+2025-04-25 15:28:50,169 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:28:50,171 - INFO - Report 生成器完成
+2025-04-25 15:29:06,968 - INFO - Running: python scraper.py --date 2025-02-25
+2025-04-25 15:29:07,295 - INFO - Scraper started for date: 2025-02-25
+2025-04-25 15:29:08,868 - ERROR - Step failed: python scraper.py --date 2025-02-25 → Command '['python', 'scraper.py', '--date', '2025-02-25']' returned non-zero exit status 1.
+2025-04-25 15:31:29,620 - INFO - ViewReport 模块结束
+2025-04-25 15:31:31,919 - INFO - ViewReport 模块启动
+2025-04-25 15:31:49,333 - INFO - Running: python scraper.py --date 2025-04-01
+2025-04-25 15:31:49,668 - INFO - Scraper started for date: 2025-04-01
+2025-04-25 15:31:51,342 - INFO - No blog entries to save for date: 2025-04-01
+2025-04-25 15:31:51,342 - INFO - Scraper finished
+2025-04-25 15:31:51,374 - INFO - Running: python chunker_indexer.py --date 2025-04-01
+2025-04-25 15:32:00,642 - INFO - Chunker/Indexer 启动
+2025-04-25 15:32:00,644 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 15:32:00,644 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 15:32:01,594 - INFO - Running: python summarizer.py --date 2025-04-01
+2025-04-25 15:32:01,872 - INFO - Summarizer started
+2025-04-25 15:32:01,873 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:32:01,901 - INFO - Running: python report.py --date 2025-04-01
+2025-04-25 15:32:01,987 - INFO - Report 生成器启动
+2025-04-25 15:32:01,987 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:32:01,989 - INFO - Report 生成器完成
+2025-04-25 15:32:13,895 - INFO - Running: python scraper.py --date 2013-01-25
+2025-04-25 15:32:14,210 - INFO - Scraper started for date: 2013-01-25
+2025-04-25 15:32:16,462 - INFO - No blog entries to save for date: 2013-01-25
+2025-04-25 15:32:16,462 - INFO - Scraper finished
+2025-04-25 15:32:16,494 - INFO - Running: python chunker_indexer.py --date 2013-01-25
+2025-04-25 15:32:25,475 - INFO - Chunker/Indexer 启动
+2025-04-25 15:32:25,477 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 15:32:25,478 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 15:32:26,360 - INFO - Running: python summarizer.py --date 2013-01-25
+2025-04-25 15:32:26,639 - INFO - Summarizer started
+2025-04-25 15:32:26,639 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:32:26,666 - INFO - Running: python report.py --date 2013-01-25
+2025-04-25 15:32:26,751 - INFO - Report 生成器启动
+2025-04-25 15:32:26,752 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:32:26,754 - INFO - Report 生成器完成
+2025-04-25 15:32:36,289 - INFO - Running: python scraper.py --date 2025-01-13
+2025-04-25 15:32:36,632 - INFO - Scraper started for date: 2025-01-13
+2025-04-25 15:32:41,654 - ERROR - Failed fetching blog entries: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2025-04-25 15:32:41,683 - INFO - Running: python chunker_indexer.py --date 2025-01-13
+2025-04-25 15:32:50,683 - INFO - Chunker/Indexer 启动
+2025-04-25 15:32:50,685 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 15:32:50,685 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 15:32:51,585 - INFO - Running: python summarizer.py --date 2025-01-13
+2025-04-25 15:32:51,860 - INFO - Summarizer started
+2025-04-25 15:32:51,861 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:32:51,889 - INFO - Running: python report.py --date 2025-01-13
+2025-04-25 15:32:51,969 - INFO - Report 生成器启动
+2025-04-25 15:32:51,970 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:32:51,971 - INFO - Report 生成器完成
+2025-04-25 15:33:03,396 - INFO - ViewReport 模块结束
+2025-04-25 15:33:05,818 - INFO - ViewReport 模块启动
+2025-04-25 15:33:10,522 - INFO - Running: python scraper.py --date 2025-01-13
+2025-04-25 15:33:10,856 - INFO - Scraper started for date: 2025-01-13
+2025-04-25 15:33:31,905 - ERROR - Failed fetching blog entries: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /blog/feed.xml (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001C7AAA8CDC0>, 'Connection to huggingface.co timed out. (connect timeout=None)'))
+2025-04-25 15:33:31,935 - INFO - Running: python chunker_indexer.py --date 2025-01-13
+2025-04-25 15:33:41,328 - INFO - Chunker/Indexer 启动
+2025-04-25 15:33:41,330 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 15:33:41,330 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 15:33:42,297 - INFO - Running: python summarizer.py --date 2025-01-13
+2025-04-25 15:33:42,590 - INFO - Summarizer started
+2025-04-25 15:33:42,590 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:33:42,618 - INFO - Running: python report.py --date 2025-01-13
+2025-04-25 15:33:42,702 - INFO - Report 生成器启动
+2025-04-25 15:33:42,702 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:33:42,703 - INFO - Report 生成器完成
+2025-04-25 15:36:42,506 - INFO - ViewReport 模块结束
+2025-04-25 15:36:46,366 - INFO - ViewReport 模块启动
+2025-04-25 15:36:53,007 - INFO - Running: python scraper.py --date 2025-01-13
+2025-04-25 15:36:53,320 - INFO - Scraper started for date: 2025-01-13
+2025-04-25 15:37:14,373 - ERROR - Failed fetching blog entries: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /blog/feed.xml (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001DEE8E3CDC0>, 'Connection to huggingface.co timed out. (connect timeout=None)'))
+2025-04-25 15:37:14,404 - INFO - Running: python chunker_indexer.py --date 2025-01-13
+2025-04-25 15:37:23,436 - INFO - Chunker/Indexer 启动
+2025-04-25 15:37:23,436 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 15:37:23,436 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 15:37:24,296 - INFO - Running: python summarizer.py --date 2025-01-13
+2025-04-25 15:37:24,577 - INFO - Summarizer started
+2025-04-25 15:37:24,577 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:37:24,608 - INFO - Running: python report.py --date 2025-01-13
+2025-04-25 15:37:24,686 - INFO - Report 生成器启动
+2025-04-25 15:37:24,686 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:37:24,686 - INFO - Report 生成器完成
+2025-04-25 15:39:37,830 - INFO - Running: python scraper.py --date 2025-02-20
+2025-04-25 15:39:38,164 - INFO - Scraper started for date: 2025-02-20
+2025-04-25 15:39:59,190 - ERROR - Failed fetching blog entries: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /blog/feed.xml (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000267BF82CDC0>, 'Connection to huggingface.co timed out. (connect timeout=None)'))
+2025-04-25 15:39:59,222 - INFO - Running: python chunker_indexer.py --date 2025-02-20
+2025-04-25 15:40:08,406 - INFO - Chunker/Indexer 启动
+2025-04-25 15:40:08,408 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 15:40:08,408 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 15:40:09,289 - INFO - Running: python summarizer.py --date 2025-02-20
+2025-04-25 15:40:09,577 - INFO - Summarizer started
+2025-04-25 15:40:09,578 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:40:09,605 - INFO - Running: python report.py --date 2025-02-20
+2025-04-25 15:40:09,689 - INFO - Report 生成器启动
+2025-04-25 15:40:09,689 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 15:40:09,690 - INFO - Report 生成器完成
+2025-04-25 16:01:03,578 - INFO - ViewReport 模块结束
+2025-04-25 16:02:00,567 - INFO - ViewReport 模块启动
+2025-04-25 16:02:08,631 - INFO - Running: python scraper.py --date 2025-01-13
+2025-04-25 16:02:08,976 - INFO - Scraper started for date: 2025-01-13
+2025-04-25 16:02:10,520 - INFO - Saved entry: E:\blog_summerizer\data\2025-01-13\1dd7c478a72620d2c0a412012660d30f.json
+2025-04-25 16:02:10,520 - INFO - Scraper finished
+2025-04-25 16:02:10,551 - INFO - Running: python chunker_indexer.py --date 2025-01-13
+2025-04-25 16:02:19,502 - INFO - Chunker/Indexer 启动
+2025-04-25 16:02:19,502 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 16:02:19,502 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 16:02:20,397 - INFO - Running: python summarizer.py --date 2025-01-13
+2025-04-25 16:02:20,677 - INFO - Summarizer started
+2025-04-25 16:02:20,677 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 16:02:20,710 - INFO - Running: python report.py --date 2025-01-13
+2025-04-25 16:02:20,787 - INFO - Report 生成器启动
+2025-04-25 16:02:20,787 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 16:02:20,787 - INFO - Report 生成器完成
+2025-04-25 16:02:51,129 - INFO - Running: python scraper.py --date 2025-04-16
+2025-04-25 16:02:51,455 - INFO - Scraper started for date: 2025-04-16
+2025-04-25 16:02:53,010 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:02:53,017 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:02:53,025 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:02:53,025 - INFO - Scraper finished
+2025-04-25 16:02:53,062 - INFO - Running: python chunker_indexer.py --date 2025-04-16
+2025-04-25 16:03:02,310 - INFO - Chunker/Indexer 启动
+2025-04-25 16:03:02,315 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 16:03:02,315 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 16:03:03,214 - INFO - Running: python summarizer.py --date 2025-04-16
+2025-04-25 16:03:03,502 - INFO - Summarizer started
+2025-04-25 16:03:03,503 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 16:03:03,531 - INFO - Running: python report.py --date 2025-04-16
+2025-04-25 16:03:03,615 - INFO - Report 生成器启动
+2025-04-25 16:03:03,616 - INFO - 没有找到今日数据目录：E:\blog_summerizer\data\2025-04-25
+2025-04-25 16:03:03,617 - INFO - Report 生成器完成
+2025-04-25 16:11:08,324 - INFO - ViewReport 模块结束
+2025-04-25 16:11:10,945 - INFO - ViewReport 模块启动
+2025-04-25 16:11:13,982 - INFO - Running: python scraper.py --date 2025-02-20
+2025-04-25 16:11:14,306 - INFO - Scraper started for date: 2025-02-20
+2025-04-25 16:11:15,810 - INFO - Saved entry: E:\blog_summerizer\data\2025-02-20\056a449dbce2f23f134fd8e6d7a62484.json
+2025-04-25 16:11:15,810 - INFO - Scraper finished
+2025-04-25 16:11:15,842 - INFO - Running: python chunker_indexer.py --date 2025-02-20
+2025-04-25 16:11:24,866 - INFO - Chunker/Indexer 启动 for date: 2025-02-20
+2025-04-25 16:11:24,868 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 16:11:24,868 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 16:11:25,771 - INFO - Running: python summarizer.py --date 2025-02-20
+2025-04-25 16:11:26,048 - INFO - Summarizer started for date: 2025-02-20
+2025-04-25 16:11:26,057 - INFO - Saved summary: E:\blog_summerizer\data\2025-02-20\056a449dbce2f23f134fd8e6d7a62484_summary.json
+2025-04-25 16:11:26,058 - INFO - Summarizer finished
+2025-04-25 16:11:26,087 - INFO - Running: python report.py --date 2025-02-20
+2025-04-25 16:11:26,183 - INFO - Report 生成器启动 for date: 2025-02-20
+2025-04-25 16:11:26,192 - INFO - 已生成日报：E:\blog_summerizer\reports\2025-02-20-summary.md
+2025-04-25 16:11:26,192 - INFO - Report 生成器完成
+2025-04-25 16:11:26,208 - INFO - ViewReport 模块结束
+2025-04-25 16:11:48,867 - INFO - ViewReport 模块启动
+2025-04-25 16:12:07,264 - INFO - Running: python scraper.py --date 2025-04-16
+2025-04-25 16:12:07,617 - INFO - Scraper started for date: 2025-04-16
+2025-04-25 16:12:09,222 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:12:09,231 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:12:09,239 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:12:09,240 - INFO - Scraper finished
+2025-04-25 16:12:09,270 - INFO - Running: python chunker_indexer.py --date 2025-04-16
+2025-04-25 16:12:18,312 - INFO - Chunker/Indexer 启动 for date: 2025-04-16
+2025-04-25 16:12:18,316 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 16:12:18,316 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 16:12:19,179 - INFO - Running: python summarizer.py --date 2025-04-16
+2025-04-25 16:12:19,463 - INFO - Summarizer started for date: 2025-04-16
+2025-04-25 16:12:19,471 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7_summary.json
+2025-04-25 16:12:19,479 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3_summary.json
+2025-04-25 16:12:19,486 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903_summary.json
+2025-04-25 16:12:19,487 - INFO - Summarizer finished
+2025-04-25 16:12:19,517 - INFO - Running: python report.py --date 2025-04-16
+2025-04-25 16:12:19,617 - INFO - Report 生成器启动 for date: 2025-04-16
+2025-04-25 16:12:19,627 - INFO - 已生成日报：E:\blog_summerizer\reports\2025-04-16-summary.md
+2025-04-25 16:12:19,628 - INFO - Report 生成器完成
+2025-04-25 16:12:19,643 - INFO - ViewReport 模块结束
+2025-04-25 16:16:15,828 - INFO - ViewReport 模块启动
+2025-04-25 16:16:24,356 - INFO - Running: python scraper.py --date 2025-04-16
+2025-04-25 16:16:24,797 - INFO - Scraper started for date: 2025-04-16
+2025-04-25 16:16:27,976 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:16:29,881 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:16:31,457 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:16:31,458 - INFO - Scraper finished
+2025-04-25 16:16:31,504 - INFO - Running: python chunker_indexer.py --date 2025-04-16
+2025-04-25 16:16:40,787 - INFO - Chunker/Indexer 启动 for date: 2025-04-16
+2025-04-25 16:16:40,791 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 16:16:40,791 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 16:16:41,702 - INFO - Running: python summarizer.py --date 2025-04-16
+2025-04-25 16:16:41,986 - INFO - Summarizer started for date: 2025-04-16
+2025-04-25 16:16:41,995 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7_summary.json
+2025-04-25 16:16:42,003 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3_summary.json
+2025-04-25 16:16:42,011 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903_summary.json
+2025-04-25 16:16:42,011 - INFO - Summarizer finished
+2025-04-25 16:16:42,039 - INFO - Running: python report.py --date 2025-04-16
+2025-04-25 16:16:42,136 - INFO - Report 生成器启动 for date: 2025-04-16
+2025-04-25 16:16:42,146 - INFO - 已生成日报：E:\blog_summerizer\reports\2025-04-16-summary.md
+2025-04-25 16:16:42,146 - INFO - Report 生成器完成
+2025-04-25 16:16:42,162 - INFO - ViewReport 模块结束
+2025-04-25 16:21:22,659 - INFO - Scraper started for date: 2025-04-16
+2025-04-25 16:21:25,796 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:21:27,604 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:21:29,283 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:21:29,284 - INFO - Scraper finished
+2025-04-25 16:21:29,614 - INFO - Summarizer started for date: 2025-04-16
+2025-04-25 16:21:29,625 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7_summary.json
+2025-04-25 16:21:29,634 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3_summary.json
+2025-04-25 16:21:29,643 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903_summary.json
+2025-04-25 16:21:29,644 - INFO - Summarizer finished
+2025-04-25 16:21:29,772 - INFO - Report 生成器启动 for date: 2025-04-16
+2025-04-25 16:21:29,784 - INFO - 已生成日报：E:\blog_summerizer\reports\2025-04-16-summary.md
+2025-04-25 16:21:29,784 - INFO - Report 生成器完成
+2025-04-25 16:22:48,304 - INFO - Summarizer started for date: 2025-04-16
+2025-04-25 16:22:48,307 - WARNING - No content to summarize for E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:22:48,307 - WARNING - No content to summarize for E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:22:48,308 - WARNING - No content to summarize for E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:22:48,308 - INFO - Summarizer finished
+2025-04-25 16:22:48,435 - INFO - Report 生成器启动 for date: 2025-04-16
+2025-04-25 16:22:48,447 - INFO - 已生成日报：E:\blog_summerizer\reports\2025-04-16-summary.md
+2025-04-25 16:22:48,447 - INFO - Report 生成器完成
+2025-04-25 16:23:33,432 - INFO - ViewReport 模块启动
+2025-04-25 16:23:40,246 - INFO - Running: python scraper.py --date 2025-04-16
+2025-04-25 16:23:40,679 - INFO - Scraper started for date: 2025-04-16
+2025-04-25 16:23:43,732 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:23:45,801 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:23:47,343 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:23:47,344 - INFO - Scraper finished
+2025-04-25 16:23:47,392 - INFO - Running: python chunker_indexer.py --date 2025-04-16
+2025-04-25 16:23:56,621 - INFO - Chunker/Indexer 启动 for date: 2025-04-16
+2025-04-25 16:23:56,625 - INFO - 共收集到 0 个切块用于索引
+2025-04-25 16:23:56,625 - INFO - 未发现任何切块，跳过索引构建
+2025-04-25 16:23:57,516 - INFO - Running: python summarizer.py --date 2025-04-16
+2025-04-25 16:23:57,799 - INFO - Summarizer started for date: 2025-04-16
+2025-04-25 16:23:57,801 - WARNING - No content to summarize for E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:23:57,802 - WARNING - No content to summarize for E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:23:57,802 - WARNING - No content to summarize for E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:23:57,802 - INFO - Summarizer finished
+2025-04-25 16:23:57,831 - INFO - Running: python report.py --date 2025-04-16
+2025-04-25 16:23:57,928 - INFO - Report 生成器启动 for date: 2025-04-16
+2025-04-25 16:23:57,929 - INFO - 2025-04-16 无摘要文件可生成报告
+2025-04-25 16:23:57,929 - INFO - 未生成 2025-04-16 的日报
+2025-04-25 16:23:57,930 - INFO - Report 生成器完成
+2025-04-25 16:26:29,995 - INFO - ViewReport 模块结束
+2025-04-25 16:26:31,154 - INFO - Scraper started for date: 2025-04-16
+2025-04-25 16:26:34,178 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:26:36,025 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:26:38,027 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:26:38,027 - INFO - Scraper finished
+2025-04-25 16:26:43,226 - INFO - Summarizer started for date: 2025-04-16
+2025-04-25 16:26:43,229 - WARNING - No content to summarize for E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:26:43,230 - WARNING - No content to summarize for E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:26:43,230 - WARNING - No content to summarize for E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:26:43,231 - INFO - Summarizer finished
+2025-04-25 16:26:43,356 - INFO - Report 生成器启动 for date: 2025-04-16
+2025-04-25 16:26:43,357 - INFO - 2025-04-16 无摘要文件可生成报告
+2025-04-25 16:26:43,357 - INFO - 未生成 2025-04-16 的日报
+2025-04-25 16:26:43,358 - INFO - Report 生成器完成
+2025-04-25 16:30:41,093 - INFO - Scraper started for date: 2025-04-16
+2025-04-25 16:30:45,871 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:30:48,404 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:30:50,188 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:30:50,190 - INFO - Scraper finished
+2025-04-25 16:30:50,517 - INFO - Summarizer started for date: 2025-04-16
+2025-04-25 16:30:51,350 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:30:52,165 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:30:53,003 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:30:54,828 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:30:55,648 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:30:56,477 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:30:57,286 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:30:58,098 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:30:58,918 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:30:59,737 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:00,796 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:00,803 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7_summary.json
+2025-04-25 16:31:01,639 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:02,468 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:03,305 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:04,140 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:04,982 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:05,788 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:05,796 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3_summary.json
+2025-04-25 16:31:06,629 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:07,424 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:08,241 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:09,082 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:09,926 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:10,746 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:11,571 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:12,385 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:13,200 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:31:13,208 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903_summary.json
+2025-04-25 16:31:13,208 - INFO - Summarizer finished
+2025-04-25 16:31:13,340 - INFO - Report 生成器启动 for date: 2025-04-16
+2025-04-25 16:31:13,350 - INFO - 已生成日报：E:\blog_summerizer\reports\2025-04-16-summary.md
+2025-04-25 16:31:13,350 - INFO - Report 生成器完成
+2025-04-25 16:43:30,312 - INFO - Scraper started for date: 2025-04-16
+2025-04-25 16:43:33,581 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-04-25 16:43:35,328 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-04-25 16:43:36,950 - INFO - Saved entry: E:\blog_summerizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-04-25 16:43:36,952 - INFO - Scraper finished
+2025-04-25 16:43:37,286 - INFO - Summarizer started for date: 2025-04-16
+2025-04-25 16:43:38,112 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:38,918 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:39,734 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:40,550 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:41,356 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:42,163 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:43,002 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:44,374 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:45,196 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:46,018 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:46,832 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:46,843 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7_summary.json
+2025-04-25 16:43:47,675 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:43:48,488 - ERROR - 摘要失败：E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json，错误：403 Client Error: Forbidden for url: https://generativelanguage.googleapis.com/v1beta2/models/gemini-2.0-flash:generateMessage
+2025-04-25 16:55:38,343 - INFO - ViewReport 模块启动
+2025-04-25 16:55:41,548 - INFO - ViewReport 模块结束
+2025-04-25 16:56:23,134 - INFO - Summarizer started for date: 2025-04-16
+2025-04-25 16:57:03,824 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7_summary.json
+2025-04-25 17:25:21,525 - INFO - Saved summary: E:\blog_summerizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3_summary.json
+2025-04-25 17:26:01,910 - INFO - Report 生成器启动 for date: 2025-04-16
+2025-04-25 17:26:01,926 - INFO - 已生成日报：E:\blog_summerizer\reports\2025-04-16-summary.md
+2025-04-25 17:26:01,926 - INFO - Report 生成器完成

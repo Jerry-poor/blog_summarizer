@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HF Blog Daily</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside id="history">
+    <h2>History</h2>
+    <ul id="history-list"></ul>
+  </aside>
+
+  <main id="main">
+    <div id="report-container">
+      <h1>Daily Report</h1>
+      <textarea id="report" readonly>Loading...</textarea>
+    </div>
+
+    <div id="chat-container">
+      <div id="messages"></div>
+      <div id="controls">
+        <input type="text" id="question" placeholder="Ask about report..." />
+        <button id="send">Send</button>
+      </div>
+    </div>
+
+    <div id="poster-container">
+      <input type="file" id="image-input" accept="image/*">
+      <button id="make-poster">Generate Poster</button>
+    </div>
+    <div id="poster-output"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

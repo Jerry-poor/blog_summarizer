@@ -1,0 +1,19 @@
+your_project/
+├─ config.py
+├─ logger.py
+├─ api.json
+├─ scraper.py
+├─ chunker_indexer.py
+├─ summarizer.py
+├─ report.py
+├─ chat.py
+├─ run_daily.bat
+├─ data/
+│  └─ 2025-04-26/
+│     ├─ post1.json
+│     └─ post2.json
+├─ index/
+│  ├─ faiss_index.bin
+│  └─ meta.json
+└─ reports/
+   └─ 2025-04-26-summary.md
