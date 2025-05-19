@@ -1,0 +1,3112 @@
+[
+  {
+    "chunk_id": 0,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "**Abstract:**\n\nCohere 模型现已作为 HF Hub 上的推理提供商提供支持。Cohere models are now supported as Inference Providers on HF Hub.\n这是首个直接在 Hub 上共"
+  },
+  {
+    "chunk_id": 1,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "享和服务的模型创建者。This marks the first model creator to share and serve their models directly on the Hub.\n企业用户现可通过 Cohere 运行无服务器推理，模型包括"
+  },
+  {
+    "chunk_id": 2,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": " `CohereLabs/c4ai-command-r-v01` 等。Enterprise users can now run serverless inference via Cohere to models including `CohereLabs/"
+  },
+  {
+    "chunk_id": 3,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "c4ai-command-r-v01`, etc.\n重点模型 `CohereLabs/c4ai-command-a-03-2025` 针对需要快速、安全和高质量 AI 的企业进行了优化。The key model `CohereLabs/c4ai-comm"
+  },
+  {
+    "chunk_id": 4,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "and-a-03-2025` is optimized for demanding enterprises requiring fast, secure, and high-quality AI.\n其 256k 上下文长度（Context Length）能"
+  },
+  {
+    "chunk_id": 5,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "处理更长的企业文档。Its 256k context length can handle much longer enterprise documents.\n利用 Cohere 和 Cohere Labs 驱动您的项目。Power up your proj"
+  },
+  {
+    "chunk_id": 6,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ects with Cohere and Cohere Labs.\n\n**摘要:**\n\nCohere 提供了一系列先进的大语言模型，支持包括中文在内的23种语言。\nCohere offers a suite of advanced large langua"
+  },
+  {
+    "chunk_id": 7,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ge models, supporting 23 languages including Chinese.\n\n`aya-expanse-32b` 专注于多语言支持，应用了最新的多语言预训练研究。\n`aya-expanse-32b` focuses on m"
+  },
+  {
+    "chunk_id": 8,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ultilingual support, applying the latest research on multilingual pre-training.\n\n`c4ai-command-r7b-12-2024` 适用于低成本或低延迟场景，提供RAG、推"
+  },
+  {
+    "chunk_id": 9,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "理和工具使用，上下文长度为128K。\n`c4ai-command-r7b-12-2024` is ideal for low-cost or low-latency use cases, offering RAG, reasoning, and tool "
+  },
+  {
+    "chunk_id": 10,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "use, with a context length of 128K.\n\n`aya-vision-32b` 是一个320亿参数模型，优化用于OCR、图像描述和视觉推理等视觉-语言任务。\n`aya-vision-32b` is a 32-billion pa"
+  },
+  {
+    "chunk_id": 11,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "rameter model optimized for vision-language tasks such as OCR, captioning, and visual reasoning.\n\nCohere模型可以通过Hugging Face Hub在网"
+  },
+  {
+    "chunk_id": 12,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "页UI或客户端SDK中使用。\nCohere models can be used directly on the Hugging Face Hub either on the website UI or via client SDKs.\n\n**Abstra"
+  },
+  {
+    "chunk_id": 13,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ct:**\n\n本文展示了如何使用 Hugging Face Hub 作为接口，利用 Cohere API 进行推理。\nThis paper demonstrates utilizing the Cohere API for inference via th"
+  },
+  {
+    "chunk_id": 14,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "e Hugging Face Hub interface.\n\n通过设置 `provider=\"cohere\"` 和提供 API 密钥，用户可以使用 `InferenceClient` 与 Cohere 模型交互，如 `CohereLabs/c4ai-com"
+  },
+  {
+    "chunk_id": 15,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "mand-r7b-12-2024`。\nBy setting `provider=\"cohere\"` and providing an API key, users can interact with Cohere models, such as `Cohe"
+  },
+  {
+    "chunk_id": 16,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "reLabs/c4ai-command-r7b-12-2024`, using the `InferenceClient`.\n\n同时，本文还介绍了如何使用 `CohereLabs/aya-vision-32b` 模型处理多模态输入，包括 base64 编码"
+  },
+  {
+    "chunk_id": 17,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "的图像 (`image_url = f\"data:image/jpeg;base64,{base64_image}\"`)。\nFurthermore, this paper introduces how to process multimodal input"
+  },
+  {
+    "chunk_id": 18,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "s, including base64 encoded images (`image_url = f\"data:image/jpeg;base64,{base64_image}\"`), with the `CohereLabs/aya-vision-32b"
+  },
+  {
+    "chunk_id": 19,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "` model.\n\n最后, 简要展示了通过 JavaScript 和 `@huggingface/inference` 与 `CohereLabs/c4ai-command-a-03-2025` 模型进行交互。\nFinally, it briefly de"
+  },
+  {
+    "chunk_id": 20,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "monstrates interacting with the `CohereLabs/c4ai-command-a-03-2025` model via JavaScript using `@huggingface/inference`.\n\n**Abst"
+  },
+  {
+    "chunk_id": 21,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ract:**\n\nThis paper demonstrates how to use Cohere models, specifically Command R7B, via the OpenAI client library and Hugging F"
+  },
+  {
+    "chunk_id": 22,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ace Hub for inference and agentic tool use.\n本文展示了如何通过 OpenAI 客户端库和 Hugging Face Hub 使用 Cohere 模型，特别是 Command R7B，进行推理和智能工具使用。\n\nT"
+  },
+  {
+    "chunk_id": 23,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "he process involves setting the `base_url` to the Hugging Face Inference API endpoint (e.g., `\"https://router.huggingface.co/coh"
+  },
+  {
+    "chunk_id": 24,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ere/compatibility/v1\"`), providing an `api_key`, and then using the `client.chat.completions.create()` method with the desired m"
+  },
+  {
+    "chunk_id": 25,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "odel (e.g., `\"command-a-03-2025\"`).\n该过程包括将 `base_url` 设置为 Hugging Face 推理 API 端点（例如，`\"https://router.huggingface.co/cohere/compa"
+  },
+  {
+    "chunk_id": 26,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "tibility/v1\"`），提供 `api_key`，然后使用 `client.chat.completions.create()` 方法和所需的模型（例如，`\"command-a-03-2025\"`）。\n\nFurthermore, the paper "
+  },
+  {
+    "chunk_id": 27,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "explores the integration of tools, such as `get_flight_info(loc_origin, loc_destination)`, by defining a function and its parame"
+  },
+  {
+    "chunk_id": 28,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ters.\n此外，本文还探讨了通过定义函数及其参数来集成工具，例如 `get_flight_info(loc_origin, loc_destination)`。\n\nThese tool definitions are passed to the mode"
+  },
+  {
+    "chunk_id": 29,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "l, enabling it to perform actions based on user queries.\n这些工具定义被传递给模型，使其能够根据用户查询执行操作。\n\n**Abstract:**\n\nThis work presents an appl"
+  },
+  {
+    "chunk_id": 30,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ication of the Hugging Face InferenceClient for interacting with the CohereLabs/c4ai-command-r7b-12-2024 model.\n本研究展示了使用 Hugging"
+  },
+  {
+    "chunk_id": 31,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": " Face InferenceClient 与 CohereLabs/c4ai-command-r7b-12-2024 模型交互的应用。\n\nA sample message chain, including user query and tool call"
+  },
+  {
+    "chunk_id": 32,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "s, demonstrates the process of retrieving flight information.\n一个示例消息链，包括用户查询和工具调用，演示了检索航班信息的过程。\n\nThe interaction is facilitated "
+  },
+  {
+    "chunk_id": 33,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "through the `client.chat.completions.create()` method, utilizing `messages` and `tools`.\n通过 `client.chat.completions.create()` 方"
+  },
+  {
+    "chunk_id": 34,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "法，利用 `messages` 和 `tools` 促进了交互。\n\nBilling information is provided, emphasizing standard Cohere API rates for routed requests and"
+  },
+  {
+    "chunk_id": 35,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": " inference credits for Hugging Face PRO users.\n提供了计费信息，强调了路由请求的标准 Cohere API 价格以及 Hugging Face PRO 用户的推理积分。\n\n**摘要（Abstract）**\n\n用"
+  },
+  {
+    "chunk_id": 36,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "户询问是否可以通过用户界面（UI）或API请求获取所有对话数据，以便进行进一步研究。\nA user inquired about obtaining all conversation data either via the UI or through AP"
+  },
+  {
+    "chunk_id": 37,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "I requests for further research.\n\n作者回应当前没有此选项，但会考虑，并推测用户可能用于数据标注。\nThe author responded that there is currently no such option, b"
+  },
+  {
+    "chunk_id": 38,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "ut it will be considered, speculating that the user might be using it for data labelling.\n\n用户澄清研究目的包括标注、研究用户缺失、学习人类对不同语言模型（LM）行为"
+  },
+  {
+    "chunk_id": 39,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "的反应等。\nThe user clarified that the research purpose includes labelling, studying user deficiencies, learning about human reaction"
+  },
+  {
+    "chunk_id": 40,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": "s to various LM behavior, etc.\n\n建议用户暂时以编程方式使用提供者（providers）并自行存储数据。\nIt was suggested that the user temporarily utilize providers"
+  },
+  {
+    "chunk_id": 41,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3_summary",
+    "text": " programmatically and store the data themselves."
+  },
+  {
+    "chunk_id": 42,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "**Abstract**\n\n评估长上下文语言模型既具有挑战性又非常重要。Evaluating long-context language models is challenging but important. 现有评估过度依赖合成任务。Existing "
+  },
+  {
+    "chunk_id": 43,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "evaluations overly rely on synthetic tasks. HELMET旨在为LCLMs构建多样化、可控和可靠的评估体系。HELMET aims to craft diverse, controllable, and relia"
+  },
+  {
+    "chunk_id": 44,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ble evaluation for LCLMs. 相比现有基准，HELMET 进行了关键改进。HELMET offers key improvements over existing benchmarks. 结果表明，LCLMs在真实世界任务中仍有很长的"
+  },
+  {
+    "chunk_id": 45,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "路要走。The results show that LCLMs still have a long way to go on real-world tasks. 需要多样化的评估来评估长上下文能力。Diverse evaluation is needed "
+  },
+  {
+    "chunk_id": 46,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "for assessing long-context abilities. 模型性能随长度和任务复杂度的增加而降低。Models degrade with increasing lengths and task complexity. HELMET可用于未"
+  },
+  {
+    "chunk_id": 47,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "来的开发，并提供快速入门指南。HELMET can be used for future developments and provides a quickstart guide. HELMET可在https://princeton-nlp.github."
+  },
+  {
+    "chunk_id": 48,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "io/HELMET和https://github.com/princeton-nlp/HELMET获取。HELMET is available at https://princeton-nlp.github.io/HELMET and https://gi"
+  },
+  {
+    "chunk_id": 49,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "thub.com/princeton-nlp/HELMET.\n\n**Abstract**\n\n长文本上下文语言模型 (LCLMs) 的发展迅速，但现有评估方法存在局限性。\nThe development of long-context language mo"
+  },
+  {
+    "chunk_id": 50,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "dels (LCLMs) is rapid, but existing evaluation methods have limitations.\n\n现有基准测试显示出违反直觉的趋势，例如较小的模型表现优于较大的模型 (图 1)。\nExisting benc"
+  },
+  {
+    "chunk_id": 51,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "hmarks show counterintuitive trends, such as smaller models outperforming larger ones (Figure 1).\n\n传统的自然语言基准测试 (例如 Scrolls) 不再适用"
+  },
+  {
+    "chunk_id": 52,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "于评估 LCLMs，因此困惑度评估和合成任务 (例如 needle-in-a-haystack) 成为主流。\nPrevious natural language benchmarks (e.g., Scrolls) are no longer suitab"
+  },
+  {
+    "chunk_id": 53,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "le for evaluating LCLMs, thus perplexity and synthetic tasks (e.g., needle-in-a-haystack) have become popular.\n\n然而，这些指标往往无法反映真实世"
+  },
+  {
+    "chunk_id": 54,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "界的性能，且模型开发者评估的数据集各不相同 (表 1)。\nHowever, these metrics often do not reflect real-world performance, and model developers evaluate o"
+  },
+  {
+    "chunk_id": 55,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "n different datasets (Table 1).\n\n我们提出了 HELMET (How to Evaluate Long-Context Models Effectively and Thoroughly)，一个综合评估 LCLMs 的基准测"
+  },
+  {
+    "chunk_id": 56,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "试，具有多样性、可控性和可靠性等优势。\nWe propose HELMET (How to Evaluate Long-Context Models Effectively and Thoroughly), a comprehensive benchmar"
+  },
+  {
+    "chunk_id": 57,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "k for evaluating LCLMs with advantages of diversity, controllability, and reliability.\n\n我们评估了 59 个 LCLMs，发现跨多种应用评估模型至关重要，且前沿 LCL"
+  },
+  {
+    "chunk_id": 58,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "Ms 在复杂任务上仍然受限。\nWe evaluate 59 LCLMs and find that evaluating across diverse applications is crucial, and frontier LCLMs are stil"
+  },
+  {
+    "chunk_id": 59,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "l limited on complex tasks.\n\n现有评估过度依赖合成任务。\nExisting evaluations overly rely on synthetic tasks.\n\n**Abstract**\n\n长文本语言模型评估的常见做法是使用"
+  },
+  {
+    "chunk_id": 60,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "困惑度或合成任务，如大海捞针(NIAH)。\nA common practice for evaluating long-context language models is to use perplexity or synthetic tasks, suc"
+  },
+  {
+    "chunk_id": 61,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "h as needle-in-a-haystack (NIAH).\n\n然而，最近的研究表明，困惑度与下游任务性能的相关性不佳。\nHowever, recent works have shown that perplexity does not correl"
+  },
+  {
+    "chunk_id": 62,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ate well with downstream performance.\n\n诸如NIAH等简单合成任务与下游任务的相关性差，而更复杂的合成任务则具有更高的相关性 (Figure 2)。\nSimple synthetic tasks, such as NI"
+  },
+  {
+    "chunk_id": 63,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "AH, do not correlate well with downstream tasks, but more complex variants achieve higher correlation (Figure 2).\n\n现有真实应用基准（如Zer"
+  },
+  {
+    "chunk_id": 64,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "oScrolls, LongBench, InfiniteBench）存在下游任务覆盖不足、无法测试前沿LCLM，以及ROUGE等指标不可靠等问题。\nExisting benchmarks with realistic applications (Zero"
+  },
+  {
+    "chunk_id": 65,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "Scrolls, LongBench, InfiniteBench) have limitations including insufficient coverage of downstream tasks, inadequacy in testing f"
+  },
+  {
+    "chunk_id": 66,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "rontier LCLMs, and unreliable metrics like ROUGE.\n\n为此，我们提出了HELMET以解决这些问题，并提供对LCLMs的全面评估。\nThus, we propose HELMET to address thes"
+  },
+  {
+    "chunk_id": 67,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "e limitations and provide a comprehensive evaluation of LCLMs.\n\nHELMET的设计原则是：下游任务的多样覆盖、长度和复杂度的可控性、以及基础模型和指令微调模型的可靠评估。\nHELMET is "
+  },
+  {
+    "chunk_id": 68,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "designed with diverse coverage of downstream tasks, controllable length and complexity, and reliable evaluation for base and ins"
+  },
+  {
+    "chunk_id": 69,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "truction-tuned models.\n\n我们的实验评估了8K到128K tokens的输入长度，且HELMET可以轻松扩展到更长的上下文长度。\nIn our experiments, we evaluate on input length from"
+  },
+  {
+    "chunk_id": 70,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": " 8K to 128K tokens, and HELMET can be easily extended to even longer context lengths.\n\n好的，这是基于您提供的内容撰写的摘要：\n\n**Abstract**\n\nHELMET"
+  },
+  {
+    "chunk_id": 71,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "包含多样化的任务集合，如检索增强生成（retrieval-augmented generation）、带引用的生成（generation with citations）和摘要（summarization）。\n*HELMET includes a diver"
+  },
+  {
+    "chunk_id": 72,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "se set of tasks, such as retrieval-augmented generation, generation with citations, and summarization.*\n\n我们精心选择了具有自然长上下文的数据集，以反映"
+  },
+  {
+    "chunk_id": 73,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "真实世界的应用，并辅以可靠的评估设置，如基于模型的评估和人工评估。\n*We carefully select datasets with naturally long contexts that reflect real-world application"
+  },
+  {
+    "chunk_id": 74,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "s. These datasets are complemented with reliable evaluation settings, such as model-based evaluations and human studies.*\n\n输入长度是"
+  },
+  {
+    "chunk_id": 75,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "评估长上下文语言模型（LCLMs）的重要维度，我们通过改变检索段落的数量 (RAG, Cite, Re-rank)、示例数量 (ICL) 或输入文档的长度 (LongQA, Summ) 来控制输入长度。\n*Input length is an import"
+  },
+  {
+    "chunk_id": 76,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ant dimension to consider when evaluating LCLMs. We control the input length by changing the number of retrieved passages (RAG, "
+  },
+  {
+    "chunk_id": 77,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "Cite, Re-rank), the number of demonstrations (ICL), or the length of the input document (LongQA, Summ).*\n\n许多现有基准测试仍使用基于n-gram的指标"
+  },
+  {
+    "chunk_id": 78,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "，如ROUGE，但其与人类判断的相关性较差。\n*Many existing benchmarks still use n-gram-based metrics, such as ROUGE, despite their poor correlation w"
+  },
+  {
+    "chunk_id": 79,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ith human judgments.*\n\n我们采用基于模型的评估，显示出更好的模型区分度以及对不同输入长度的敏感性（如图3）。\n*We employ model-based evaluations that show better distinguis"
+  },
+  {
+    "chunk_id": 80,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "hability between models and different input lengths (Figure 3).*\n\n此外，我们的人工评估表明，我们的指标与人类判断具有高度一致性。\n*Furthermore, our human studie"
+  },
+  {
+    "chunk_id": 81,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "s show that our metrics have a high agreement with human judgments.*\n\n我们通过上下文学习示例支持基础模型执行部分任务，这显著提高了基础模型的性能。\n*We support base mo"
+  },
+  {
+    "chunk_id": 82,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "dels for a subset of our tasks via in-context learning examples, which substantially improves the performance of base models.*\n\n"
+  },
+  {
+    "chunk_id": 83,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "**Abstract**\n\n大规模上下文语言模型(LCLMs)在真实世界应用中仍有很长的路要走。\n*LCLMs still have a long way to go on real-world applications.*\n\n我们对59个LCLMs进行了"
+  },
+  {
+    "chunk_id": 84,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "全面实验和分析，据我们所知，这是对长上下文模型在不同应用上最彻底和可控的比较。\n*Our experiments and analyses include a comprehensive set of 59 LCLMs. To our knowledge,"
+  },
+  {
+    "chunk_id": 85,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": " this is the most thorough and controlled comparison of long-context models on diverse applications.*\n\n长上下文基准测试通常针对特定应用，限制了对LCLM"
+  },
+  {
+    "chunk_id": 86,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "s更广泛的理解，因此需要多样化的评估。\n*Long-context benchmarks are often constructed with specific applications in mind, which limits the understa"
+  },
+  {
+    "chunk_id": 87,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "nding of LCLMs in a broader context. Diverse evaluation is needed for assessing long-context abilities.*\n\n不同类别的任务之间相关性不高(Figure "
+  },
+  {
+    "chunk_id": 88,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "4)，模型性能随着输入长度和任务复杂度的增加而下降(Figure 5)。\n*Different categories do not correlate well with each other (Figure 4), and models degrade "
+  },
+  {
+    "chunk_id": 89,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "with increasing lengths and task complexity (Figure 5).*\n\n例如，RAG和MS-MARCO相关性较高，而ICL与其他任务相关性最低，表明ICL是一种独特的任务，对模型有不同的要求。\n*For exam"
+  },
+  {
+    "chunk_id": 90,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ple, RAG and MS-MARCO correlate well, while ICL has the lowest correlation with other tasks, which suggests that ICL is a unique"
+  },
+  {
+    "chunk_id": 91,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": " task that requires different capabilities from the model.*\n\n此外，开源模型在复杂任务上落后于闭源模型。\n*Additionally, open-source models lag behind "
+  },
+  {
+    "chunk_id": 92,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "closed-source models on complex tasks.*\n\n**Abstract:**\n\n我们介绍了HELMET，一个用于评估长文本LLM的框架，它能揭示现有评估方法的盲点。\nWe introduce HELMET, a framew"
+  },
+  {
+    "chunk_id": 93,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ork for evaluating long-text LLMs, revealing blind spots in existing evaluation methods.\n\n随着长度增加，模型性能会下降，且下降程度取决于类别。\nPerformance"
+  },
+  {
+    "chunk_id": 94,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": " degradation with increasing lengths is category-dependent.\n\n即使是最先进的模型，如GPT-4o和Gemini，在重排序等任务上的性能也会显著下降，而仅通过合成任务的性能无法观察到这种变化。\nEv"
+  },
+  {
+    "chunk_id": 95,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "en the most advanced models, such as GPT-4o and Gemini, experience a significant performance decrease on tasks like re-ranking, "
+  },
+  {
+    "chunk_id": 96,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "a change not observable from synthetic task performance.\n\n没有一个模型在所有类别中都表现最佳，因此需要跨不同维度进行评估。\nThere is no clear winner across all c"
+  },
+  {
+    "chunk_id": 97,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ategories, thereby calling for evaluation across different axes.\n\nHELMET易于使用，通过克隆GitHub仓库并配置环境即可运行。\nHELMET is easy to use, simpl"
+  },
+  {
+    "chunk_id": 98,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "y clone our GitHub repository and set up the environment.\n\nHELMET支持多种加载模型的方式，包括HuggingFace的`transformers`库、HuggingFace的TGI、Huggi"
+  },
+  {
+    "chunk_id": 99,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ngFace的Inference Endpoints、`vllm`以及模型提供商的API。\nHELMET supports multiple ways of loading models, including HuggingFace's `transfor"
+  },
+  {
+    "chunk_id": 100,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "mers` library, HuggingFace's TGI, HuggingFace's Inference Endpoints, `vllm`, and model provider's APIs.\n\n使用`python eval.py --con"
+  },
+  {
+    "chunk_id": 101,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "fig configs/rag.yaml --model_name_or_path <model_name>`运行评估。\nRun evaluations using `python eval.py --config configs/rag.yaml --m"
+  },
+  {
+    "chunk_id": 102,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "odel_name_or_path <model_name>`.\n\nThis paper presents methods for benchmarking language models using the `eval.py` script with d"
+  },
+  {
+    "chunk_id": 103,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ifferent inference endpoints.\n本文介绍了使用`eval.py`脚本，通过不同推理端点来评测语言模型的方法。\n\nWe detail using Text Generation Inference (TGI) with the c"
+  },
+  {
+    "chunk_id": 104,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "onfiguration `model_name_or_path: tgi:meta-llama/Llama-3.1-8B-Instruct` and `use_tgi_serving: true`, requiring the setting of `L"
+  },
+  {
+    "chunk_id": 105,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "LM_ENDPOINT`.\n我们详细介绍了如何使用 Text Generation Inference (TGI)，配置为 `model_name_or_path: tgi:meta-llama/Llama-3.1-8B-Instruct` 和 `use_"
+  },
+  {
+    "chunk_id": 106,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "tgi_serving: true`，需要设置 `LLM_ENDPOINT`。\n\nAlternatively, HuggingFace Inference Endpoints are supported, utilizing `LLM_ENDPOINT` "
+  },
+  {
+    "chunk_id": 107,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "and `API_KEY`.\n或者，支持 HuggingFace Inference Endpoints，利用 `LLM_ENDPOINT` 和 `API_KEY`。\n\nVLLM integration is also presented, setting"
+  },
+  {
+    "chunk_id": 108,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": " `model_name_or_path: meta-llama/Llama-3.1-8B-Instruct` and `use_vllm_serving: true`, along with `LLM_ENDPOINT`.\n同时介绍了 VLLM 的集成，"
+  },
+  {
+    "chunk_id": 109,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "设置 `model_name_or_path: meta-llama/Llama-3.1-8B-Instruct` 和 `use_vllm_serving: true`，以及 `LLM_ENDPOINT`。\n\nFurthermore, support fo"
+  },
+  {
+    "chunk_id": 110,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "r provider APIs like OpenAI, Anthropic, Google, and TogetherAI is available.\n此外，还支持 OpenAI、Anthropic、Google 和 TogetherAI 等供应商的 A"
+  },
+  {
+    "chunk_id": 111,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "PI。\n\nFor rapid development, we recommend using the Recall and RAG tasks.\n为了加快开发速度，我们建议使用 Recall 和 RAG 任务。\n\nThese tasks enable fa"
+  },
+  {
+    "chunk_id": 112,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ster evaluation and correlation with realistic tasks, run with `python eval.py --config configs/rag.yaml --model_name_or_path <m"
+  },
+  {
+    "chunk_id": 113,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "odel_name>`.\n这些任务能够实现更快的评估，并与现实任务相关联，可以通过 `python eval.py --config configs/rag.yaml --model_name_or_path <model_name>` 运行。\n\n**中文"
+  },
+  {
+    "chunk_id": 114,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "摘要：**\n\n长上下文语言模型（LCLMs）的评估面临计算和内存成本挑战。\nEvaluating long-context language models (LCLMs) presents computational and memory cost cha"
+  },
+  {
+    "chunk_id": 115,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "llenges.\n\n例如，在70B模型上以所有长度运行HELMET需要一个具有8 * 80GB GPU的节点，耗费数百GPU小时。\nFor example, running HELMET at all lengths on a 70B model requ"
+  },
+  {
+    "chunk_id": 116,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ires a node with 8 * 80GB GPUs for hundreds of GPU hours.\n\nHELMET涵盖59个不同大小和架构的模型，方便研究人员进行直接比较。\nHELMET covers 59 models of differ"
+  },
+  {
+    "chunk_id": 117,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ent sizes and architectures, facilitating direct comparisons for researchers.\n\n我们最近发布了LongProc，一个用于评估LCLMs在长文本生成和遵循流程上的基准。\nWe re"
+  },
+  {
+    "chunk_id": 118,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "cently released LongProc, a benchmark for evaluating LCLMs on long-form generation and following procedures.\n\nLongProc侧重于更长的输出（高"
+  },
+  {
+    "chunk_id": 119,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "达8K tokens），而不仅仅是通常的摘要任务（1K tokens）。\nLongProc focuses on even longer outputs (up to 8K tokens) compared to typical summarization"
+  },
+  {
+    "chunk_id": 120,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": " tasks (1K tokens).\n\n我们正致力于将LongProc整合到HELMET的评估套件中，以提供更全面的评估。\nWe are working on integrating LongProc into HELMET's evaluation s"
+  },
+  {
+    "chunk_id": 121,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "uite for a more comprehensive evaluation.\n\n**英文摘要：**\n\nEvaluating long-context language models (LCLMs) presents computational and"
+  },
+  {
+    "chunk_id": 122,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": " memory cost challenges.\nFor example, running HELMET at all lengths on a 70B model requires a node with 8 * 80GB GPUs for hundre"
+  },
+  {
+    "chunk_id": 123,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ds of GPU hours.\nHELMET covers 59 models of different sizes and architectures, facilitating direct comparisons for researchers.\n"
+  },
+  {
+    "chunk_id": 124,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "We recently released LongProc, a benchmark for evaluating LCLMs on long-form generation and following procedures.\nLongProc focus"
+  },
+  {
+    "chunk_id": 125,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "es on even longer outputs (up to 8K tokens) compared to typical summarization tasks (1K tokens).\nWe are working on integrating L"
+  },
+  {
+    "chunk_id": 126,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "ongProc into HELMET's evaluation suite for a more comprehensive evaluation.\n\n## 中英对照学术摘要\n\n本文概述了近期关于大型语言模型（LLM）的社区讨论和进展。\nThis abs"
+  },
+  {
+    "chunk_id": 127,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "tract outlines recent community discussions and advancements in large language models (LLMs).\n\n重点介绍了Google的Gemma 3，一种多模态、多语言、长上下"
+  },
+  {
+    "chunk_id": 128,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "文的开放LLM。\nIt highlights Google's Gemma 3, a multimodal, multilingual, long-context open LLM.\n\n同时，介绍了ModernBERT，被认为是BERT的一种替代方案。\nA"
+  },
+  {
+    "chunk_id": 129,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "lso, it introduces ModernBERT, considered a replacement for BERT.\n\n讨论涉及长上下文评估，并提及NoLiMa基准测试 (https://github.com/adobe-research/N"
+  },
+  {
+    "chunk_id": 130,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "oLiMa)。\nThe discussion includes long-context evaluation and mentions the NoLiMa benchmark (https://github.com/adobe-research/NoL"
+  },
+  {
+    "chunk_id": 131,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903_summary",
+    "text": "iMa).\n\nNoLiMa旨在进行超越字面匹配的长上下文评估。\nNoLiMa aims for Long-Context Evaluation Beyond Literal Matching."
+  },
+  {
+    "chunk_id": 132,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "**Abstract**\n\nGradio is more than just a UI library; it's a comprehensive framework for interacting with machine learning models"
+  },
+  {
+    "chunk_id": 133,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " through UIs and APIs.\n*Gradio is more than just a UI library; it's a comprehensive framework for interacting with machine learn"
+  },
+  {
+    "chunk_id": 134,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ing models through UIs and APIs.*\nThis article highlights 17 reasons why Gradio excels, focusing on its unique features.\n*This a"
+  },
+  {
+    "chunk_id": 135,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "rticle highlights 17 reasons why Gradio excels, focusing on its unique features.*\nKey aspects include Universal API Access, inte"
+  },
+  {
+    "chunk_id": 136,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ractive API recorder, server-side rendering for fast ML apps, and automatic queue management.\n*Key aspects include Universal API"
+  },
+  {
+    "chunk_id": 137,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " Access, interactive API recorder, server-side rendering for fast ML apps, and automatic queue management.*\nIt provides high-per"
+  },
+  {
+    "chunk_id": 138,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "formance streaming, multi-page application support, and client-side function execution with Groovy.\n*It provides high-performanc"
+  },
+  {
+    "chunk_id": 139,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "e streaming, multi-page application support, and client-side function execution with Groovy.*\nGradio also offers PWA support, in"
+  },
+  {
+    "chunk_id": 140,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "-browser execution (Gradio Lite), and AI-assisted tooling for accelerated development.\n*Gradio also offers PWA support, in-brows"
+  },
+  {
+    "chunk_id": 141,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "er execution (Gradio Lite), and AI-assisted tooling for accelerated development.*\nFeatures like the enhanced Dataframe component"
+  },
+  {
+    "chunk_id": 142,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " and deep links facilitate app state sharing.\n*Features like the enhanced Dataframe component and deep links facilitate app stat"
+  },
+  {
+    "chunk_id": 143,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "e sharing.*\nFurthermore, it boasts enterprise-grade security, exemplified through its REST API endpoints for events.\n*Furthermor"
+  },
+  {
+    "chunk_id": 144,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "e, it boasts enterprise-grade security, exemplified through its REST API endpoints for events.*\nOfficial SDKs in Python (`gradio"
+  },
+  {
+    "chunk_id": 145,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "_client`) and JavaScript (`@gradio/client`) enhance accessibility.\n*Official SDKs in Python (`gradio_client`) and JavaScript (`@"
+  },
+  {
+    "chunk_id": 146,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "gradio/client`) enhance accessibility.*\n\n```\n**Abstract**\n\n在JS Web框架中实现SSR渲染需要广泛的全栈开发专业知识。\nRendering while implementing SSR in J"
+  },
+  {
+    "chunk_id": 147,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "S web frameworks requires extensive full-stack development expertise.\n\nGradio 提供 Web 框架级别的性能，同时保持纯 Python 的开发体验（注意：除了需要安装 Node！）"
+  },
+  {
+    "chunk_id": 148,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "。\nGradio delivers web framework-level performance while maintaining a pure Python development experience (Note: except for havin"
+  },
+  {
+    "chunk_id": 149,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "g to installing Node!).\n\nGradio 为 ML 应用提供定制化的队列系统，处理 GPU 密集型计算和高容量用户访问。\nGradio provides a sophisticated queuing system tailored "
+  },
+  {
+    "chunk_id": 150,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "for ML applications that handles both GPU-intensive computations and high-volume user access.\n\nGradio 的队列自动处理应用中定义的各种任务，无论是运行在 G"
+  },
+  {
+    "chunk_id": 151,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "PU 上的长时间预测、音频/视频流，还是非 ML 任务。\nGradio's queue automatically handles different kinds of tasks defined in your application, whether "
+  },
+  {
+    "chunk_id": 152,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "they are long predictions that run on a GPU, audio/video streaming, or non-ML tasks.\n\n通过 concurrency_id，应用可扩展到数千并发用户，避免资源争用和系统过载"
+  },
+  {
+    "chunk_id": 153,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "。\nYour applications can scale to thousands of concurrent users without resource contention and system overwhelming through `conc"
+  },
+  {
+    "chunk_id": 154,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "urrency_id`.\n\n通过服务器发送事件 (Server-Side Events) 提供实时队列状态更新。\nReal-time queue status updates via Server-Side Events.\n\nGradio 的流式传输能力通"
+  },
+  {
+    "chunk_id": 155,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "过 `yield` 语句实现低延迟更新，支持token-by-token文本生成，图像迭代更新，并通过 HTTP Live Streaming (HLS) 协议实现音频/视频流。\nGradio's streaming capabilities throug"
+  },
+  {
+    "chunk_id": 156,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "h `yield` enable low-latency updates, supporting token-by-token text generation, step-by-step image generation updates, and smoo"
+  },
+  {
+    "chunk_id": 157,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "th audio/video streaming via HTTP Live Streaming (HLS) protocol.\n```\n\n## 学术摘要 (Abstract)\n\nGradio 5引入流式传输改进和多页应用支持，以及使用Groovy实现客户"
+  },
+  {
+    "chunk_id": 158,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "端函数执行。\nGradio 5 introduces streaming improvements, multi-page application support, and client-side function execution with Groov"
+  },
+  {
+    "chunk_id": 159,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "y.\n\n与需要手动线程管理和轮询的框架不同，Gradio通过FastRTC，仅用Python即可创建实时音视频流应用。\nUnlike frameworks requiring manual threading and polling, Gradio ena"
+  },
+  {
+    "chunk_id": 160,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "bles real-time audio/video streaming with FastRTC using only Python.\n\nGradio原生支持多页应用，提供自动URL路由和导航栏生成，共享后端资源。\nGradio natively sup"
+  },
+  {
+    "chunk_id": 161,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ports multi-page applications, providing automatic URL routing, navigation bar generation, and shared backend resources.\n\n无需单独脚本"
+  },
+  {
+    "chunk_id": 162,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "和显式路由设置，Gradio使用Python声明即可实现自动路由和导航栏。\nEliminating separate scripts and explicit routing, Gradio offers automatic routing and nav"
+  },
+  {
+    "chunk_id": 163,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "igation bar using Python declarations.\n\nGradio 5通过Groovy实现Python到JavaScript的自动转译，使用 `js=True` 标记实现客户端UI即时更新，降低服务器负载。\nGradio 5 in"
+  },
+  {
+    "chunk_id": 164,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "troduces Groovy for automatic Python-to-JavaScript transpilation, enabling instant client-side UI updates with the `js=True` fla"
+  },
+  {
+    "chunk_id": 165,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "g, reducing server load.\n\n**Abstract:**\n\nGradio distinguishes itself by automatic Python-to-JavaScript transpilation, enabling s"
+  },
+  {
+    "chunk_id": 166,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ingle-language development with web-native performance.\nGradio sets itself apart with automatic transpilation from Python to Jav"
+  },
+  {
+    "chunk_id": 167,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "aScript, providing a single-language development experience with web-native performance.\n\nIts theming system offers polished int"
+  },
+  {
+    "chunk_id": 168,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "erfaces with presets like Monochrome and Soft, ensuring mobile responsiveness and accessibility.\nIts comprehensive theming syste"
+  },
+  {
+    "chunk_id": 169,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "m offers polished interfaces with theme presets (e.g., Monochrome, Soft), ensuring mobile responsiveness and accessibility.\n\nML-"
+  },
+  {
+    "chunk_id": 170,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "specific UI components include Undo/Retry buttons for chat, and `ImageEditor` for segmentation.\nML-specific UI components includ"
+  },
+  {
+    "chunk_id": 171,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "e Undo/Retry buttons for chat interfaces and `ImageEditor` for segmentation use-cases.\n\nEnhanced UI features support Reasoning L"
+  },
+  {
+    "chunk_id": 172,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "LMs and Nested Agents, elevating AI Agents in chat interfaces.\nEnhanced UI features support Reasoning LLMs and Nested Agents wit"
+  },
+  {
+    "chunk_id": 173,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "hin chat interfaces, elevating AI Agents.\n\n`@gr.render()` facilitates dynamic interface updates, empowering ML practitioners wit"
+  },
+  {
+    "chunk_id": 174,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "hout web design expertise.\nThe `@gr.render()` decorator facilitates dynamic interface updates, empowering ML practitioners witho"
+  },
+  {
+    "chunk_id": 175,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ut web design expertise.\n\n**Abstract:**\n\nGradio empowers dynamic UI creation by enabling the addition of components and listener"
+  },
+  {
+    "chunk_id": 176,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "s dynamically based on user interaction and state.\n*Gradio empowers dynamic UI creation by enabling the addition of components a"
+  },
+  {
+    "chunk_id": 177,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "nd listeners dynamically based on user interaction and state.*\n\nUI modifications can now be rendered on-the-fly based on model o"
+  },
+  {
+    "chunk_id": 178,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "utputs or workflows.\n*UI modifications can now be rendered on-the-fly based on model outputs or workflows.*\n\nThe `.render()` met"
+  },
+  {
+    "chunk_id": 179,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "hod allows rendering Gradio Blocks within other Blocks, distinct from the render decorator.\n*The `.render()` method allows rende"
+  },
+  {
+    "chunk_id": 180,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ring Gradio Blocks within other Blocks, distinct from the render decorator.*\n\nGradio Sketch introduces a visual, no-code environ"
+  },
+  {
+    "chunk_id": 181,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ment for ML application design (WYSIWYG editor) that simplifies interface building, event definition, and function attachment.\n*"
+  },
+  {
+    "chunk_id": 182,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "Gradio Sketch introduces a visual, no-code environment for ML application design (WYSIWYG editor) that simplifies interface buil"
+  },
+  {
+    "chunk_id": 183,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ding, event definition, and function attachment.*\n\nIt includes real-time preview and automatic code generation, further democrat"
+  },
+  {
+    "chunk_id": 184,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "izing AI development.\n*It includes real-time preview and automatic code generation, further democratizing AI development.*\n\nGrad"
+  },
+  {
+    "chunk_id": 185,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "io also offers Progressive Web App (PWA) support, enhancing web application capabilities.\n*Gradio also offers Progressive Web Ap"
+  },
+  {
+    "chunk_id": 186,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "p (PWA) support, enhancing web application capabilities.*\n\n**Abstract:**\n\nGradio supports Progressive Web Apps (PWAs), which fun"
+  },
+  {
+    "chunk_id": 187,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ction like installable platform-specific applications.\nGradio 支持渐进式 Web 应用 (PWA)，其功能类似于可安装的特定于平台的应用程序。\n*Gradio supports Progress"
+  },
+  {
+    "chunk_id": 188,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ive Web Apps (PWAs), which function like installable platform-specific applications.*\n\nGradio Lite enables browser-side executio"
+  },
+  {
+    "chunk_id": 189,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "n via Pyodide (WebAssembly) for serverless deployment and enhanced privacy.\nGradio Lite 通过 Pyodide (WebAssembly) 实现浏览器端执行，用于无服务器"
+  },
+  {
+    "chunk_id": 190,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "部署和增强隐私性。\n*Gradio Lite enables browser-side execution via Pyodide (WebAssembly) for serverless deployment and enhanced privacy.*"
+  },
+  {
+    "chunk_id": 191,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "\n\nThis differentiates Gradio from other frameworks requiring continuous server operation or separate JavaScript implementations."
+  },
+  {
+    "chunk_id": 192,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "\n这使得 Gradio 不同于需要持续服务器操作或单独 JavaScript 实现的其他框架。\n*This differentiates Gradio from other frameworks requiring continuous server op"
+  },
+  {
+    "chunk_id": 193,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "eration or separate JavaScript implementations.*\n\nAI-assisted tooling in Gradio, including hot reload and AI Playground, acceler"
+  },
+  {
+    "chunk_id": 194,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ates ML application development.\nGradio 中由 AI 辅助的工具，包括热重载和 AI Playground，加速了 ML 应用程序的开发。\n*AI-assisted tooling in Gradio, includi"
+  },
+  {
+    "chunk_id": 195,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ng hot reload and AI Playground, accelerates ML application development.*\n\nGradio's `Transformers.js` integration and one-line p"
+  },
+  {
+    "chunk_id": 196,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "rototyping further streamline the development process.\nGradio 的 `Transformers.js` 集成和一行式原型设计进一步简化了开发流程。\n*Gradio's `Transformers."
+  },
+  {
+    "chunk_id": 197,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "js` integration and one-line prototyping further streamline the development process.*\n\n**摘要 (Abstract)**\n\nGradio 兼容 OpenAI API 端"
+  },
+  {
+    "chunk_id": 198,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "点，可通过 `gr.load()` 实现应用搭建.\nGradio is compatible with OpenAI API endpoints, achievable through `gr.load()`.\n\nGradio 提供即时UI反馈和AI辅助开"
+  },
+  {
+    "chunk_id": 199,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "发，加速机器学习应用开发与修改。\nGradio offers instant UI feedback and AI-assisted development, accelerating ML application development and modi"
+  },
+  {
+    "chunk_id": 200,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "fication.\n\n通过设置 `demo.launch(share=True)`，可生成即时公共URL，域名格式为 `xxxxx.gradio.live`，有效期1周。\nAn instant public URL is generated via `de"
+  },
+  {
+    "chunk_id": 201,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "mo.launch(share=True)`, with a domain format of `xxxxx.gradio.live` and a validity of 1 week.\n\nGradio 使用快速反向代理 (Fast Reverse Pro"
+  },
+  {
+    "chunk_id": 202,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "xy, FRP) 通过安全TLS隧道连接本地运行的应用。\nGradio uses Fast Reverse Proxy (FRP) through a secure TLS tunnel to connect locally-running applica"
+  },
+  {
+    "chunk_id": 203,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "tions.\n\n企业部署可自托管FRP服务器，避免1周超时限制。\nFor enterprise deployments, a self-hosted FRP server avoids the 1-week timeout.\n\nGradio 提供本地环境即"
+  },
+  {
+    "chunk_id": 204,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "时分享，无需云部署或服务器配置。\nGradio offers instant sharing from the local development environment, without cloud deployment or server config"
+  },
+  {
+    "chunk_id": 205,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "uration.\n\n**Abstract**\n\nGradio提供无需服务器部署或端口转发的即时协作与演示能力，方便社群使用。\nGradio offers immediate collaboration and demonstration capabilit"
+  },
+  {
+    "chunk_id": 206,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "y without server hosting or port forwarding, facilitating community access.\n\n当前通过分享链接共享的Gradio应用超过5000个，这种方法非常适合快速原型设计和收集即时反馈。\nW"
+  },
+  {
+    "chunk_id": 207,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ith over 5,000 Gradio apps shared via share links, it's ideal for quick prototyping and gathering immediate feedback.\n\nGradio已从原"
+  },
+  {
+    "chunk_id": 208,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "型工具发展为生产级框架，具有全面的安全措施，包括第三方安全审计和漏洞评估。\nGradio has evolved into a production-ready framework with comprehensive security measures,"
+  },
+  {
+    "chunk_id": 209,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " including third-party security audits and vulnerability assessments.\n\n例如，可以通过`GRADIO_ALLOWED_PATHS`控制文件路径访问，通过`GRADIO_SSR_MODE`"
+  },
+  {
+    "chunk_id": 210,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "进行服务端渲染。\nFor example, control file path access via `GRADIO_ALLOWED_PATHS`, and Server-side rendering through `GRADIO_SSR_MODE`.\n"
+  },
+  {
+    "chunk_id": 211,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "\nGradio提供针对机器学习部署场景的专业安全、受保护的文件上传处理以及经过清理的模型输入/输出处理。\nGradio offers specialized security for ML deployment, protected file upload"
+  },
+  {
+    "chunk_id": 212,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " handling for ML model inputs, and sanitized model i/o processing.\n\n更新后的Gradio dataframe组件通过多单元格选择、行号和列固定、搜索和过滤功能以及静态列等改进，满足机器学习"
+  },
+  {
+    "chunk_id": 213,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "应用中常见的数据可视化需求。\nGradio's updated dataframe component addresses common data visualization needs in ML applications with multi-cell"
+  },
+  {
+    "chunk_id": 214,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " selection, row/column pinning, search/filter functions, and static columns.\n\n## Abstract\n\nGradio has evolved into an AI framewo"
+  },
+  {
+    "chunk_id": 215,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "rk enabling Python-based web application development without web expertise.\n*Gradio has evolved from a demo tool into an AI-focu"
+  },
+  {
+    "chunk_id": 216,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "sed framework that lets developers build complete web applications in Python without requiring web development expertise.*\n\nKey "
+  },
+  {
+    "chunk_id": 217,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "features include Python-to-JavaScript transpilation, built-in queuing, real-time audio-video streaming using FastRTC, and server"
+  },
+  {
+    "chunk_id": 218,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "-side rendering.\n*The innovations in Gradio 4 and 5, such as Python-to-JavaScript transpilation, built-in queuing for resource-i"
+  },
+  {
+    "chunk_id": 219,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ntensive models, real-time audio-video streaming with FastRTC, and server-side rendering, provide capabilities that would otherw"
+  },
+  {
+    "chunk_id": 220,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ise require extensive implementation work in other frameworks.*\n\n`gr.DeepLinkButton` facilitates sharing app states via Deep Lin"
+  },
+  {
+    "chunk_id": 221,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ks, a feature often requiring custom state management in other frameworks.\n*`gr.DeepLinkButton` component implements Deep Links,"
+  },
+  {
+    "chunk_id": 222,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " a feature that allows users to capture and share the exact state of an application, most frameworks require custom state manage"
+  },
+  {
+    "chunk_id": 223,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ment code to achieve similar functionality.*\n\nGradio simplifies infrastructure management, allowing ML practitioners to focus on"
+  },
+  {
+    "chunk_id": 224,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " model development and UI delivery.\n*By handling infrastructure concerns like API endpoint generation, security vulnerabilities,"
+  },
+  {
+    "chunk_id": 225,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " and queue management, Gradio enables ML practitioners to concentrate on model development while still delivering polished user "
+  },
+  {
+    "chunk_id": 226,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "interfaces.*\n\nThe framework supports rapid prototyping and production deployment using the same Python codebase.\n*The Gradio fra"
+  },
+  {
+    "chunk_id": 227,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "mework supports both rapid prototyping and production deployment scenarios through the same Python code base.*\n\n**Abstract:**\n\nG"
+  },
+  {
+    "chunk_id": 228,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "radio provides versatile tools for all users.\n*Gradio provides versatile tools for all users.*\n\nExplore the various capabilities"
+  },
+  {
+    "chunk_id": 229,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " of Gradio, including building MCP servers.\n*Explore the various capabilities of Gradio, including building MCP servers.*\n\nRecen"
+  },
+  {
+    "chunk_id": 230,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "t blog articles discuss Gradio's growth, exemplified by reaching 1 million users.\n*Recent blog articles discuss Gradio's growth,"
+  },
+  {
+    "chunk_id": 231,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " exemplified by reaching 1 million users.*\n\nCommunity discussions address issues such as `_pickle.UnpicklingError` when loading "
+  },
+  {
+    "chunk_id": 232,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "models using `torch.load(path, map_location='cuda', weights_only=False)` and styling customization via CSS.\n*Community discussio"
+  },
+  {
+    "chunk_id": 233,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "ns address issues such as `_pickle.UnpicklingError` when loading models using `torch.load(path, map_location='cuda', weights_onl"
+  },
+  {
+    "chunk_id": 234,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": "y=False)` and styling customization via CSS.*\n\nUsers can upload media files by dragging, pasting, or clicking.\n*Users can upload"
+  },
+  {
+    "chunk_id": 235,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " media files by dragging, pasting, or clicking.*\n\nThe platform encourages user interaction through commenting and upvoting.\n*The"
+  },
+  {
+    "chunk_id": 236,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7_summary",
+    "text": " platform encourages user interaction through commenting and upvoting.*"
+  },
+  {
+    "chunk_id": 237,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "Back to Articles\nCohere on Hugging Face Inference Providers 🔥\nPublished\n\t\t\t\tApril 16, 2025\nUpdate on GitHub\nUpvote\n126\n+120\nreac"
+  },
+  {
+    "chunk_id": 238,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "h-vb\nVaibhav Srivastav\nburtenshaw\nben burtenshaw\nmerve\nMerve Noyan\ncelinah\nCélina Hanouti\nalexrs\nAlejandro Rodriguez\nCohereLabs\n"
+  },
+  {
+    "chunk_id": 239,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "julien-c\nJulien Chaumond\nsbrandeis\nSimon Brandeis\nCohere Models\nCohereLabs/c4ai-command-a-03-2025 🔗\nCohereLabs/aya-expanse-32b 🔗"
+  },
+  {
+    "chunk_id": 240,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "\nCohereLabs/c4ai-command-r7b-12-2024 🔗\nCohereLabs/aya-vision-32b 🔗\nHow it works\nIn the website UI\nFrom the client SDKs\nFrom Open"
+  },
+  {
+    "chunk_id": 241,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "AI client\nTool Use with Cohere Models\nBilling\nWe're thrilled to share that\nCohere\nis now a supported Inference Provider on HF Hu"
+  },
+  {
+    "chunk_id": 242,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "b! This also marks the first model creator to share and serve their models directly on the Hub.\nCohere\nis committed to building "
+  },
+  {
+    "chunk_id": 243,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "and serving models purpose-built for enterprise use-cases. Their comprehensive suite of secure AI solutions, from cutting-edge G"
+  },
+  {
+    "chunk_id": 244,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "enerative AI to powerful Embeddings and Ranking models, are designed to tackle real-world business challenges. Additionally,\nCoh"
+  },
+  {
+    "chunk_id": 245,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ere Labs\n, Cohere’s in house research lab, supports fundamental research and seeks to change the spaces where research happens.\n"
+  },
+  {
+    "chunk_id": 246,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "Starting now, you can run serverless inference to the following models via Cohere and Inference Providers:\nCohereLabs/c4ai-comma"
+  },
+  {
+    "chunk_id": 247,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "nd-r-v01\nCohereLabs/c4ai-command-r-plus\nCohereLabs/c4ai-command-r-08-2024\nCohereLabs/c4ai-command-r7b-12-2024\nCohereLabs/c4ai-co"
+  },
+  {
+    "chunk_id": 248,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "mmand-a-03-2025\nCohereLabs/aya-expanse-8b\nCohereLabs/aya-expanse-32b\nCohereLabs/aya-vision-8b\nCohereLabs/aya-vision-32b\nLight up"
+  },
+  {
+    "chunk_id": 249,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": " your projects with Cohere and Cohere Labs today!\nCohere Models\nCohere and Cohere Labs bring a swathe of their models to Inferen"
+  },
+  {
+    "chunk_id": 250,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ce Providers that excel at specific business applications. Let’s explore some in detail.\nCohereLabs/c4ai-command-a-03-2025\n🔗\nOpt"
+  },
+  {
+    "chunk_id": 251,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "imized for demanding enterprises that require fast, secure, and high-quality AI. Its 256k context length (2x most leading models"
+  },
+  {
+    "chunk_id": 252,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": ") can handle much longer enterprise documents. Other key features include Cohere’s advanced retrieval-augmented generation (RAG)"
+  },
+  {
+    "chunk_id": 253,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": " with verifiable citations, agentic tool use, enterprise-grade security, and strong multilingual performance (support for 23 lan"
+  },
+  {
+    "chunk_id": 254,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "guages).\nCohereLabs/aya-expanse-32b\n🔗\nFocuses on state-of-the-art multilingual support, applying the latest research on multilin"
+  },
+  {
+    "chunk_id": 255,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "gual pre-training. Supports Arabic, Chinese (simplified & traditional), Czech, Dutch, English, French, German, Greek, Hebrew, Hi"
+  },
+  {
+    "chunk_id": 256,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ndi, Indonesian, Italian, Japanese, Korean, Persian, Polish, Portuguese, Romanian, Russian, Spanish, Turkish, Ukrainian, and Vie"
+  },
+  {
+    "chunk_id": 257,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "tnamese with 128K context length.\nCohereLabs/c4ai-command-r7b-12-2024\n🔗\nIdeal for low-cost or low-latency use cases, bringing st"
+  },
+  {
+    "chunk_id": 258,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ate-of-the-art performance in its class of open-weight models across real-world tasks. This model offers a context length of 128"
+  },
+  {
+    "chunk_id": 259,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "k. It delivers a powerful combination of multilingual support, citation-verified retrieval-augmented generation (RAG), reasoning"
+  },
+  {
+    "chunk_id": 260,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": ", tool use, and agentic behavior. Also supports 23 languages.\nCohereLabs/aya-vision-32b\n🔗\n32-billion parameter model with advanc"
+  },
+  {
+    "chunk_id": 261,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ed capabilities optimized for a variety of vision-language use cases, including OCR, captioning, visual reasoning, summarization"
+  },
+  {
+    "chunk_id": 262,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": ", question answering, code, and more. It expands multimodal capabilities to 23 languages spoken by over half the world's populat"
+  },
+  {
+    "chunk_id": 263,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ion.\nHow it works\nYou can use Cohere models directly on the Hub either on the website UI or via the client SDKs.\nYou can find al"
+  },
+  {
+    "chunk_id": 264,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "l the examples mentioned in this section on the\nCohere documentation page\n.\nIn the website UI\nYou can search for Cohere models b"
+  },
+  {
+    "chunk_id": 265,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "y filtering by the inference provider in the\nmodel hub\n.\nFrom the Model Card, you can select the inference provider and run infe"
+  },
+  {
+    "chunk_id": 266,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "rence directly in the UI.\nFrom the client SDKs\nLet’s walk through using Cohere models from client SDKs. We’ve also made a\ncolab "
+  },
+  {
+    "chunk_id": 267,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "notebook\nwith these snippets, in case you want to try them out right away.\nfrom Python, using huggingface_hub\nThe following exam"
+  },
+  {
+    "chunk_id": 268,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ple shows how to use Command A using Cohere as your inference provider. You can use a\nHugging Face token\nfor automatic routing t"
+  },
+  {
+    "chunk_id": 269,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "hrough Hugging Face, or your own cohere API key if you have one.\nInstall\nhuggingface_hub\nv0.30.0 or later:\npip install -U\n\"huggi"
+  },
+  {
+    "chunk_id": 270,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ngface_hub>=0.30.0\"\nUse the\nhuggingface_hub\npython library to call Cohere endpoints by defining the\nprovider\nparameter.\nfrom\nhug"
+  },
+  {
+    "chunk_id": 271,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "gingface_hub\nimport\nInferenceClient\n\nclient = InferenceClient(\n    provider=\n\"cohere\"\n,\n    api_key=\n\"xxxxxxxxxxxxxxxxxxxxxxxx\"\n"
+  },
+  {
+    "chunk_id": 272,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": ",\n)\n\nmessages = [\n        {\n\"role\"\n:\n\"user\"\n,\n\"content\"\n:\n\"How to make extremely spicy Mayonnaise?\"\n}\n]\n\ncompletion = client.cha"
+  },
+  {
+    "chunk_id": 273,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "t.completions.create(\n    model=\n\"CohereLabs/c4ai-command-r7b-12-2024\"\n,\n    messages=messages,\n    temperature=\n0.7\n,\n    max_t"
+  },
+  {
+    "chunk_id": 274,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "okens=\n512\n,\n)\nprint\n(completion.choices[\n0\n].message)\nAya Vision, Cohere Labs’ multilingual, multimodal model is also supported"
+  },
+  {
+    "chunk_id": 275,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": ". You can include images encoded in base64 as follows:\nimage_path =\n\"img.jpg\"\nwith\nopen\n(image_path,\n\"rb\"\n)\nas\nf:\n    base64_ima"
+  },
+  {
+    "chunk_id": 276,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ge = base64.b64encode(f.read()).decode(\n\"utf-8\"\n)\nimage_url =\nf\"data:image/jpeg;base64,\n{base64_image}\n\"\nfrom\nhuggingface_hub\nim"
+  },
+  {
+    "chunk_id": 277,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "port\nInferenceClient\n\nclient = InferenceClient(\n    provider=\n\"cohere\"\n,\n    api_key=\n\"xxxxxxxxxxxxxxxxxxxxxxxx\"\n,\n)\n\nmessages ="
+  },
+  {
+    "chunk_id": 278,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": " [\n        {\n\"role\"\n:\n\"user\"\n,\n\"content\"\n: [\n                {\n\"type\"\n:\n\"text\"\n,\n\"text\"\n:\n\"What's in this image?\"\n},\n           "
+  },
+  {
+    "chunk_id": 279,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "     {\n\"type\"\n:\n\"image_url\"\n,\n\"image_url\"\n: {\n\"url\"\n: image_url},\n                },\n            ]\n        }\n]\n\ncompletion = cli"
+  },
+  {
+    "chunk_id": 280,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ent.chat.completions.create(\n    model=\n\"CohereLabs/aya-vision-32b\"\n,\n    messages=messages,\n    temperature=\n0.7\n,\n    max_toke"
+  },
+  {
+    "chunk_id": 281,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ns=\n512\n,\n)\nprint\n(completion.choices[\n0\n].message)\nfrom JS using @huggingface/inference\nimport\n{\nHfInference\n}\nfrom\n\"@huggingfa"
+  },
+  {
+    "chunk_id": 282,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ce/inference\"\n;\nconst\nclient =\nnew\nHfInference\n(\n\"xxxxxxxxxxxxxxxxxxxxxxxx\"\n);\nconst\nchatCompletion =\nawait\nclient.\nchatCompleti"
+  },
+  {
+    "chunk_id": 283,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "on\n({\nmodel\n:\n\"CohereLabs/c4ai-command-a-03-2025\"\n,\nmessages\n: [\n        {\nrole\n:\n\"user\"\n,\ncontent\n:\n\"How to make extremely spic"
+  },
+  {
+    "chunk_id": 284,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "y Mayonnaise?\"\n}\n    ],\nprovider\n:\n\"cohere\"\n,\nmax_tokens\n:\n512\n});\nconsole\n.\nlog\n(chatCompletion.\nchoices\n[\n0\n].\nmessage\n);\nFrom"
+  },
+  {
+    "chunk_id": 285,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": " OpenAI client\nHere's how you can call Command R7B using Cohere as the inference provider via the OpenAI client library.\nfrom\nop"
+  },
+  {
+    "chunk_id": 286,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "enai\nimport\nOpenAI\n\nclient = OpenAI(\n    base_url=\n\"https://router.huggingface.co/cohere/compatibility/v1\"\n,\n    api_key=\n\"xxxxx"
+  },
+  {
+    "chunk_id": 287,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "xxxxxxxxxxxxxxxxxxx\"\n,\n)\n\nmessages = [\n        {\n\"role\"\n:\n\"user\"\n,\n\"content\"\n:\n\"How to make extremely spicy Mayonnaise?\"\n}\n]\n\nco"
+  },
+  {
+    "chunk_id": 288,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "mpletion = client.chat.completions.create(\n    model=\n\"command-a-03-2025\"\n,\n    messages=messages,\n    temperature=\n0.7\n,\n)\nprin"
+  },
+  {
+    "chunk_id": 289,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "t\n(completion.choices[\n0\n].message)\nTool Use with Cohere Models\nCohere’s models bring state-of-the-art agentic tool use to Infer"
+  },
+  {
+    "chunk_id": 290,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ence Providers so let’s explore that in detail. Both the Hugging Face Hub client and the OpenAI client are compatible with tools"
+  },
+  {
+    "chunk_id": 291,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": " via inference providers, so the above examples can be expanded.\nFirst, we will need to define tools for the model to use. Below"
+  },
+  {
+    "chunk_id": 292,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": " we define the\nget_flight_info\nwhich calls an API for the latest flight information using two locations. This tool definition wi"
+  },
+  {
+    "chunk_id": 293,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ll be represented by the model’s chat template. Which we can also explore in the\nmodel card\n(🎉 open source).\ntools = [\n    {\n\"ty"
+  },
+  {
+    "chunk_id": 294,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "pe\"\n:\n\"function\"\n,\n\"function\"\n: {\n\"name\"\n:\n\"get_flight_info\"\n,\n\"description\"\n:\n\"Get flight information between two cities or air"
+  },
+  {
+    "chunk_id": 295,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ports\"\n,\n\"parameters\"\n: {\n\"type\"\n:\n\"object\"\n,\n\"properties\"\n: {\n\"loc_origin\"\n: {\n\"type\"\n:\n\"string\"\n,\n\"description\"\n:\n\"The departu"
+  },
+  {
+    "chunk_id": 296,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "re airport, e.g. MIA\"\n,\n                    },\n\"loc_destination\"\n: {\n\"type\"\n:\n\"string\"\n,\n\"description\"\n:\n\"The destination airpor"
+  },
+  {
+    "chunk_id": 297,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "t, e.g. NYC\"\n,\n                    },\n                },\n\"required\"\n: [\n\"loc_origin\"\n,\n\"loc_destination\"\n],\n            },\n     "
+  },
+  {
+    "chunk_id": 298,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "   },\n    }\n]\nNext, we’ll need to pass messages to the inference client for the model to use the tools when relevant. In the exa"
+  },
+  {
+    "chunk_id": 299,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "mple below we define the assistant’s tool call in\ntool_calls,\nfor the sake of clarity.\nmessages = [\n    {\n\"role\"\n:\n\"developer\"\n,"
+  },
+  {
+    "chunk_id": 300,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "\n\"content\"\n:\n\"Today is April 30th\"\n},\n    {\n\"role\"\n:\n\"user\"\n,\n\"content\"\n:\n\"When is the next flight from Miami to Seattle?\"\n,\n   "
+  },
+  {
+    "chunk_id": 301,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": " },\n    {\n\"role\"\n:\n\"assistant\"\n,\n\"tool_calls\"\n: [\n            {\n\"function\"\n: {\n\"arguments\"\n:\n'{ \"loc_destination\": \"Seattle\", \"l"
+  },
+  {
+    "chunk_id": 302,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "oc_origin\": \"Miami\" }'\n,\n\"name\"\n:\n\"get_flight_info\"\n,\n                },\n\"id\"\n:\n\"get_flight_info0\"\n,\n\"type\"\n:\n\"function\"\n,\n     "
+  },
+  {
+    "chunk_id": 303,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "       }\n        ],\n    },\n    {\n\"role\"\n:\n\"tool\"\n,\n\"name\"\n:\n\"get_flight_info\"\n,\n\"tool_call_id\"\n:\n\"get_flight_info0\"\n,\n\"content\"\n"
+  },
+  {
+    "chunk_id": 304,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": ":\n\"Miami to Seattle, May 1st, 10 AM.\"\n,\n    },\n]\nFinally, the tools and messages are passed to the create method.\nfrom\nhuggingfa"
+  },
+  {
+    "chunk_id": 305,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ce_hub\nimport\nInferenceClient\n\nclient = InferenceClient(\n    provider=\n\"cohere\"\n,\n    api_key=\n\"xxxxxxxxxxxxxxxxxxxxxxxx\"\n,\n)\n\nc"
+  },
+  {
+    "chunk_id": 306,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ompletion = client.chat.completions.create(\n    model=\n\"CohereLabs/c4ai-command-r7b-12-2024\"\n,\n    messages=messages,\n    tools="
+  },
+  {
+    "chunk_id": 307,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "tools,\n    temperature=\n0.7\n,\n    max_tokens=\n512\n,\n)\nprint\n(completion.choices[\n0\n].message)\nBilling\nFor direct requests, i.e. "
+  },
+  {
+    "chunk_id": 308,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "when you use a Cohere key, you are billed directly on your Cohere account.\nFor routed requests, i.e. when you authenticate via t"
+  },
+  {
+    "chunk_id": 309,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "he Hub, you'll only pay the standard Cohere API rates. There's no additional markup from us, we just pass through the provider c"
+  },
+  {
+    "chunk_id": 310,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "osts directly. (In the future, we may establish revenue-sharing agreements with our provider partners.)\nImportant Note ‼️ PRO us"
+  },
+  {
+    "chunk_id": 311,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ers get $2 worth of Inference credits every month. You can use them across providers. 🔥\nSubscribe to the\nHugging Face PRO plan\nt"
+  },
+  {
+    "chunk_id": 312,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "o get access to Inference credits, ZeroGPU, Spaces Dev Mode, 20x higher limits, and more.\nMore Articles from our Blog\nIntroducin"
+  },
+  {
+    "chunk_id": 313,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "g HUGS - Scale your AI with Open Models\nBy\nphilschmid\nOctober 23, 2024\n•\n37\nBuild AI on premise with Dell Enterprise Hub\nBy\njeff"
+  },
+  {
+    "chunk_id": 314,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "boudier\nMay 21, 2024\n•\n24\nCommunity\nborgr\nApr 16\n•\nedited Apr 16\nGreat announcement!\nIs there a way to opt in to share my data w"
+  },
+  {
+    "chunk_id": 315,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ith the world when using the UI? Or get all my conversations with an API request (so others\\we can build this opt in, in some ha"
+  },
+  {
+    "chunk_id": 316,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "cky way)?\nSee translation\nReply\nmerve\nArticle author\nApr 17\n•\nedited Apr 17\n@\nborgr\nhello! as of now there's no such option, but"
+  },
+  {
+    "chunk_id": 317,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": " we'll consider this, you want this for data labelling right? ☺️ for now you can use the providers programmatically and store th"
+  },
+  {
+    "chunk_id": 318,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "em yourself I think\nSee translation\n1 reply\n·\nborgr\nabout 1 month ago\nLabelling, studying what people lack, learning about human"
+  },
+  {
+    "chunk_id": 319,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": " reactions to various LM behavior etc.\nSee translation\nMohamedGhanySaleh\nabout 1 month ago\nUuu\nReply\nDESSEP\n29 days ago\nThis com"
+  },
+  {
+    "chunk_id": 320,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ment has been hidden (marked as Off-Topic)\nDolzikov\n27 days ago\nThis comment has been hidden (marked as Off-Topic)\nMoMaged\n25 da"
+  },
+  {
+    "chunk_id": 321,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "ys ago\n•\nedited 25 days ago\n.\nReply\nEdit\nPreview\nUpload images, audio, and videos by dragging in the text input, pasting, or\ncli"
+  },
+  {
+    "chunk_id": 322,
+    "entry_id": "083b5505811e9c85b194ea4d085583a3",
+    "text": "cking here\n.\nTap or paste here to upload images\nComment\n·\nSign up\nor\nlog in\nto comment\nUpvote\n126\n+114"
+  },
+  {
+    "chunk_id": 323,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "Back to Articles\nIntroducing\nHELMET\n: Holistically Evaluating Long-context Language Models\nPublished\n\t\t\t\tApril 16, 2025\nUpdate o"
+  },
+  {
+    "chunk_id": 324,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "n GitHub\nUpvote\n27\n+21\nhyen\nHoward Yen\nguest\ngaotianyu1350\nTianyu Gao\nguest\nhouminmin\nMinmin Hou\nIntel\nkding1\nKe Ding\nIntel\ndanf"
+  },
+  {
+    "chunk_id": 325,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "\nDaniel Fleischer\nIntel\nmoshew\nMoshe Wasserblat\nIntel\ncdq10131\nDanqi Chen\nguest\nEvaluating long-context language models is chall"
+  },
+  {
+    "chunk_id": 326,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "enging but important\nExisting evaluations overly rely on synthetic tasks\nCrafting diverse, controllable, and reliable evaluation"
+  },
+  {
+    "chunk_id": 327,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " for LCLMs\nKey improvements over existing benchmarks\nLCLMs still have a long way to go on real-world tasks\nDiverse evaluation is"
+  },
+  {
+    "chunk_id": 328,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " needed for assessing long-context abilities\nModels degrade with increasing lengths and task complexity\nUsing HELMET for future "
+  },
+  {
+    "chunk_id": 329,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "developments\nHow to run HELMET\nFaster development\nQuick comparison with existing models\nLooking ahead\nAcknowledgements\nCitation\n"
+  },
+  {
+    "chunk_id": 330,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "Contact:\nhyen@cs.princeton.edu\nPaper:\nhttps://arxiv.org/abs/2410.02694\nWebsite:\nhttps://princeton-nlp.github.io/HELMET\nCode & Da"
+  },
+  {
+    "chunk_id": 331,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ta:\nhttps://github.com/princeton-nlp/HELMET\nSince we first released HELMET last October, there has been more development on long"
+  },
+  {
+    "chunk_id": 332,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "-context language models than ever before, and we are thrilled to see the adoption of HELMET by the community, such as\nMicrosoft"
+  },
+  {
+    "chunk_id": 333,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "'s Phi-4\nand\nAI21's Jamba 1.6\n.\nAfter the initial release, we have added more models to our evaluation suite and conducted addit"
+  },
+  {
+    "chunk_id": 334,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ional analyses. We are excited to share our new results and present HELMET at ICLR 2025!\nIn this blog, we will describe the cons"
+  },
+  {
+    "chunk_id": 335,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "truction of HELMET, our key findings, and how practitioners can use HELMET to differentiate between various LCLMs in future rese"
+  },
+  {
+    "chunk_id": 336,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "arch and applications.\nFinally, we will conclude with a quickstart guide for using HELMET with HuggingFace.\nEvaluating long-cont"
+  },
+  {
+    "chunk_id": 337,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ext language models is challenging but important\nFrom summarizing numerous legal documents to learning new tasks on the fly, lon"
+  },
+  {
+    "chunk_id": 338,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "g-context language models (LCLMs) have immense potential to change the way we use and interact with language models.\nLanguage mo"
+  },
+  {
+    "chunk_id": 339,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "dels have been limited by their context window, which is around 2K to 8K tokens (e.g.,\nChatGPT\n,\nLlama-2/3\n).\nRecently, model de"
+  },
+  {
+    "chunk_id": 340,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "velopers have been constantly increasing the context window of their models, with recent models like\nGPT-4o\n,\nClaude-3\n, and\nGem"
+  },
+  {
+    "chunk_id": 341,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ini-1.5\nsupporting context windows of up to millions of tokens.\nFigure 1: Existing benchmarks show counterintuitive trends, such"
+  },
+  {
+    "chunk_id": 342,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " as smaller models outperforming larger ones (e.g., Llama-3.1 8B > 70B).\nHowever, with longer context windows, previous natural "
+  },
+  {
+    "chunk_id": 343,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "language benchmarks (e.g.,\nScrolls\n) are no longer suitable for evaluating LCLMs.\nConsequently, perplexity and synthetic tasks ("
+  },
+  {
+    "chunk_id": 344,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "e.g., needle-in-a-haystack) emerged as the most popular evaluation metrics for recent LCLMs, but they often\ndo not reflect real-"
+  },
+  {
+    "chunk_id": 345,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "world performance\n.\nModel developers may also evaluate on other arbitrary datasets, which complicates model comparisons.\nFurther"
+  },
+  {
+    "chunk_id": 346,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "more, existing benchmarks for LCLMs may show confusing and counterintuitive results, making it difficult to understand the stren"
+  },
+  {
+    "chunk_id": 347,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "gths and weaknesses of different models (Figure 1).\nIn this work, we propose HELMET (How to Evaluate Long-Context Models Effecti"
+  },
+  {
+    "chunk_id": 348,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "vely and Thoroughly), a comprehensive benchmark for evaluating LCLMs that improves upon existing benchmarks in several ways—\ndiv"
+  },
+  {
+    "chunk_id": 349,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ersity, controllability, and reliability\n.\nWe evaluate 59 recent LCLMs and find that it is crucial to evaluate models across div"
+  },
+  {
+    "chunk_id": 350,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "erse applications to understand their capabilities and frontier LCLMs are still limited on complex tasks.\nExisting evaluations o"
+  },
+  {
+    "chunk_id": 351,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "verly rely on synthetic tasks\nWith the development of LCLMs across both industry and the open-source community, it is crucial to"
+  },
+  {
+    "chunk_id": 352,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " have a reliable method for evaluating and comparing these models. However, current models are\noften evaluated on different benc"
+  },
+  {
+    "chunk_id": 353,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "hmarks\n(Table 1).\nTable 1: Model developers often evaluate on different sets of datasets.\n♭\n: Base models. NQA: NarrativeQA, Qsp"
+  },
+  {
+    "chunk_id": 354,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "r: Qasper, QALT: QuALITY, SQALT: SQuALTY.\nA common practice for evaluating long-context language models is to use perplexity or "
+  },
+  {
+    "chunk_id": 355,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "synthetic tasks, such as needle-in-a-haystack (NIAH). \nHowever, recent works have shown that perplexity does not correlate well "
+  },
+  {
+    "chunk_id": 356,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "with downstream performance (\nFang et al., 2024\n). \nIn Figure 2, we show that synthetic tasks like NIAH do not correlate with re"
+  },
+  {
+    "chunk_id": 357,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "al-world performance, but the more complex synthetic tasks achieve higher correlation with real-world tasks.\nFigure 2: Simple sy"
+  },
+  {
+    "chunk_id": 358,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "nthetic tasks, such as NIAH, do not correlate well with downstream tasks, such as summarization or generation with citations. Mo"
+  },
+  {
+    "chunk_id": 359,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "re complex variants (e.g., RULER MV) achieve higher correlation.\nAmong the existing benchmarks with realistic applications, such"
+  },
+  {
+    "chunk_id": 360,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " as ZeroScrolls (\nShaman et al., 2023\n), LongBench (\nBai et al., 2024\n), and InfiniteBench (\nZhang et al., 2024\n), there are sti"
+  },
+  {
+    "chunk_id": 361,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ll crucial limitations:\nInsufficient coverage of downstream tasks: often focused on specific domains\nInadequate lengths for test"
+  },
+  {
+    "chunk_id": 362,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ing frontier LCLMs: older QA datasets are often limited to <32K tokens (e.g.,\nQASPER\n,\nQuALITY\n)\nUnreliable metrics: N-gram matc"
+  },
+  {
+    "chunk_id": 363,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "hing metrics like ROUGE are noisy—they do not correlate with human judgments (\nGoyal et al., 2023\n) and do not distinguish betwe"
+  },
+  {
+    "chunk_id": 364,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "en models\nIncompatibility with base models: require instruction-tuning, which means they cannot be used for base model developme"
+  },
+  {
+    "chunk_id": 365,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "nt\nThus, we propose HELMET to address these limitations and provide a comprehensive evaluation of LCLMs.\nCrafting diverse, contr"
+  },
+  {
+    "chunk_id": 366,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ollable, and reliable evaluation for LCLMs\nWe design HELMET with the following desiderata:\nDiverse coverage of downstream tasks\n"
+  },
+  {
+    "chunk_id": 367,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "Controllable length and complexity\nReliable evaluation for base and instruction-tuned models\nTable 2 shows an overview of the be"
+  },
+  {
+    "chunk_id": 368,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "nchmark.\nIn our experiments, we evaluate on input length from 8K to 128K tokens, but HELMET can be easily extended to even longe"
+  },
+  {
+    "chunk_id": 369,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "r context lengths.\nTable 2: Overview of HELMET datasets. SubEM: Substring Exact Match.\nKey improvements over existing benchmarks"
+  },
+  {
+    "chunk_id": 370,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "\nDiverse coverage\n: HELMET includes a diverse set of tasks, such as retrieval-augmented generation with real retrieval passages,"
+  },
+  {
+    "chunk_id": 371,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " generation with citations, and summarization. We carefully select datasets with naturally long contexts that reflect real-world"
+  },
+  {
+    "chunk_id": 372,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " applications. These datasets are complemented with reliable evaluation settings, such as model-based evaluations and human stud"
+  },
+  {
+    "chunk_id": 373,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ies.\nControllable length and difficulty\n: An important dimension to consider when evaluating LCLMs is the input length, as longe"
+  },
+  {
+    "chunk_id": 374,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "r inputs can provide more information while challenging the model's ability to process noisy contexts. In our tasks, we can cont"
+  },
+  {
+    "chunk_id": 375,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "rol the input length by changing the number of retrieved passages (RAG, Cite, Re-rank), the number of demonstrations (ICL), or t"
+  },
+  {
+    "chunk_id": 376,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "he length of the input document (LongQA, Summ). Although LongQA and Summ cannot be easily extended to longer contexts, we intent"
+  },
+  {
+    "chunk_id": 377,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ionally chose datasets with natural documents of length far greater than 100K tokens, such that they can still be used to evalua"
+  },
+  {
+    "chunk_id": 378,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "te frontier LCLMs.\nReliable evaluation\n: Many existing benchmarks still use n-gram-based metrics, such as ROUGE, despite their p"
+  },
+  {
+    "chunk_id": 379,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "oor correlation with human judgments (\nGoyal et al., 2023\n). We employ model-based evaluations that show better distinguishabili"
+  },
+  {
+    "chunk_id": 380,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ty between models and different input lengths (Figure 3). Furthermore, our human studies show that our metrics have a high agree"
+  },
+  {
+    "chunk_id": 381,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ment with human judgments.\nFigure 3: ROUGE cannot differentiate between models and lengths, while model-based evaluations are be"
+  },
+  {
+    "chunk_id": 382,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "tter at separating models of different capacities.\nRobust prompting\n: Existing long-context benchmarks often require models to f"
+  },
+  {
+    "chunk_id": 383,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ollow instructions, but many model developments revolve around base models, which have to rely on synthetic tasks or perplexity "
+  },
+  {
+    "chunk_id": 384,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "for evaluation. Thus, we support base models for a subset of our tasks via in-context learning examples. This substantially impr"
+  },
+  {
+    "chunk_id": 385,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "oves the performance of base models, which is more reflective of real-world applications.\nLCLMs still have a long way to go on r"
+  },
+  {
+    "chunk_id": 386,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "eal-world tasks\nOur experiments and analyses include a comprehensive set of 59 LCLMs. To our knowledge, this is the most thoroug"
+  },
+  {
+    "chunk_id": 387,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "h and controlled comparison of long-context models on diverse applications. These models cover both leading proprietary and open"
+  },
+  {
+    "chunk_id": 388,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "-source models, and we also consider models with different architectures (e.g., full-attention transformers, hybrid architecture"
+  },
+  {
+    "chunk_id": 389,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "s) and positional extrapolation techniques. In this section, we will highlight a few key findings from our experiments.\nDiverse "
+  },
+  {
+    "chunk_id": 390,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "evaluation is needed for assessing long-context abilities\nLong-context benchmarks are often constructed with specific applicatio"
+  },
+  {
+    "chunk_id": 391,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ns in mind, such as summarization or question answering, which limits the understanding of LCLMs in a broader context. We examin"
+  },
+  {
+    "chunk_id": 392,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "e model performance over a wide range of real tasks and find that different categories do not always correlate with each other ("
+  },
+  {
+    "chunk_id": 393,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "Figure 4).\nFigure 4: Different categories do not correlate well with each other.\nWhile some tasks moderately correlate with each"
+  },
+  {
+    "chunk_id": 394,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " other (e.g., RAG and MS-MARCO) due to their retrieval-based nature, others show little correlation (e.g., Summ and Cite). Notab"
+  },
+  {
+    "chunk_id": 395,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ly, ICL has the lowest correlation with other tasks, which suggests that it is a unique task that requires different capabilitie"
+  },
+  {
+    "chunk_id": 396,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "s from the model. Therefore, model developers should evaluate across these distinct axes to draw a more holistic picture of the "
+  },
+  {
+    "chunk_id": 397,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "model's capabilities.\nModels degrade with increasing lengths and task complexity\nWe present the results of the frontier propriet"
+  },
+  {
+    "chunk_id": 398,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ary models as well as a few open-source models on HELMET.\nAdditional results can be found in the paper and the website.\nFigure 5"
+  },
+  {
+    "chunk_id": 399,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": ": HELMET results on selected instruction-tuned models across tasks and input lengths.\nFirst, we observe that\nopen-source models "
+  },
+  {
+    "chunk_id": 400,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "lag behind closed-source models on complex tasks\n. Although the gap appears small on simpler tasks, such as Recall, the gap wide"
+  },
+  {
+    "chunk_id": 401,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ns on more complex ones, such as Cite.\nFurthermore,\nperformance degradation with increasing lengths is category-dependent\n. Even"
+  },
+  {
+    "chunk_id": 402,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " the most advanced models, such as GPT-4o and Gemini, experience a significant decrease in performance on tasks like re-ranking."
+  },
+  {
+    "chunk_id": 403,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " This change in performance cannot be observed from simply looking at the synthetic task performance.\nFinally,\nthere is no clear"
+  },
+  {
+    "chunk_id": 404,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " winner across all categories\n, thereby calling for evaluation across different axes. Additional analysis, such as the performan"
+  },
+  {
+    "chunk_id": 405,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ce of different positional extrapolation methods and the lost-in-the-middle phenomenon, can be found in the paper.\nUsing HELMET "
+  },
+  {
+    "chunk_id": 406,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "for future developments\nHow to run HELMET\nUsing HELMET is easy! Simply clone our\nGitHub repository\n, and everything is ready to "
+  },
+  {
+    "chunk_id": 407,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "go after setting up the environment!\nWe provide many different ways for loading models, which can be configured in the config fi"
+  },
+  {
+    "chunk_id": 408,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "le:\nusing HuggingFace's\ntransformers\nlibrary\nusing HuggingFace's TGI to launch a model endpoint in your machine\nusing HuggingFac"
+  },
+  {
+    "chunk_id": 409,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "e's Inference Endpoints to launch a remote model endpoint\nusing vllm to launch a model endpoint in your machine. Note: You can l"
+  },
+  {
+    "chunk_id": 410,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "aunch vllm endpoint on Intel Gaudi accelerators.\nusing model provider's APIs\nOption 1. Using HuggingFace's\ntransformers\nlibrary\n"
+  },
+  {
+    "chunk_id": 411,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "Just use the config yamls in our repo and run these evaluations with\npython eval.py --config configs/rag.yaml --model_name_or_pa"
+  },
+  {
+    "chunk_id": 412,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "th <model_name>\nBehind the scenes, HuggingFace's\ntransformers\nlibrary is used, and both local and remote models are automaticall"
+  },
+  {
+    "chunk_id": 413,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "y supported.\nOption 2. Using HuggingFace's TGI\nFirst, follow the instructions on\nTGI github\nto launch a model endpoint. Then in "
+  },
+  {
+    "chunk_id": 414,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "your config file, specify the endpoint url. For example, you can have a config.yaml like below\ninput_max_length: 131072\ndatasets"
+  },
+  {
+    "chunk_id": 415,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": ": kilt_nq\ngeneration_max_length: 20\ntest_files: data/kilt/nq-dev-multikilt_1000_k1000_dep6.jsonl\ndemo_files: data/kilt/nq-train-"
+  },
+  {
+    "chunk_id": 416,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "multikilt_1000_k3_dep6.jsonl\nuse_chat_template: true\nmax_test_samples: 100\nshots: 2\nstop_new_line: true\nmodel_name_or_path: tgi:"
+  },
+  {
+    "chunk_id": 417,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "meta-llama/Llama-3.1-8B-Instruct # need to add \"tgi:\" prefix\nuse_tgi_serving: true # add this line in your config\nThen use the c"
+  },
+  {
+    "chunk_id": 418,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ommand below to run the benchmark\nexport\nLLM_ENPOINT=<your-tgi-endpoint>\n# example: \"https://10.10.10.1:8080/v1\"\npython eval.py "
+  },
+  {
+    "chunk_id": 419,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "--config configs/config.yaml --endpoint_url\n$LLM_ENDPOINT\nOption 3. Using HuggingFace's Inference Endpoints\nFirst set up an endp"
+  },
+  {
+    "chunk_id": 420,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "oint by following the instructions\nhere\n. Get the endpoint url and your API key. Then use the same config yaml shown in Option 2"
+  },
+  {
+    "chunk_id": 421,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " above, and run the command below.\nexport\nLLM_ENPOINT=<your-hf-inference-endpoint>\n# example: \"https://XXXX.us-east-1.aws.endpoi"
+  },
+  {
+    "chunk_id": 422,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "nts.huggingface.cloud/v1\"\nexport\nAPI_KEY=<your-hf-api-key>\npython eval.py --config configs/config.yaml --endpoint_url\n$LLM_ENDPO"
+  },
+  {
+    "chunk_id": 423,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "INT\n--api_key\n$API_KEY\nOption 4. Using VLLM\nYou can launch a model endpoint with vllm on your system, including Intel Gaudi2 and"
+  },
+  {
+    "chunk_id": 424,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " Gaudi3 accelerators. See the instructions\nhere\non how to run HELMET using vllm on Intel Gaudi accelerators.\nYou can use the sam"
+  },
+  {
+    "chunk_id": 425,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "e example config.yaml as in Option 2, except for two lines of change as below:\nmodel_name_or_path: meta-llama/Llama-3.1-8B-Instr"
+  },
+  {
+    "chunk_id": 426,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "uct # no prefix needed\nuse_vllm_serving: true # use vllm instead of tgi\nThen use the command below to run the benchmark\nexport\nL"
+  },
+  {
+    "chunk_id": 427,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "LM_ENPOINT=<your-vllm-endpoint>\npython eval.py --config configs/config.yaml --endpoint_url\n$LLM_ENDPOINT\nOption 5. Using Model P"
+  },
+  {
+    "chunk_id": 428,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "rovider's APIs\nWe support APIs from OpenAI, Anthropic, Google, and TogetherAI.\nPlease refer to the instructions in our\nrepo\n.\nFa"
+  },
+  {
+    "chunk_id": 429,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ster development\nWe recommend using the Recall and RAG tasks for fast iterations during model development.\nThese tasks achieve a"
+  },
+  {
+    "chunk_id": 430,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " good balance between fast evaluation and correlation with other realistic tasks.\nYou can easily run these evaluations with just"
+  },
+  {
+    "chunk_id": 431,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "\npython eval.py --config configs/rag.yaml --model_name_or_path <model_name>\nQuick comparison with existing models\nIt is often ex"
+  },
+  {
+    "chunk_id": 432,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "pensive to run all the baselines for evaluating LCLMs, especially at long contexts given their computational and memory costs.\nF"
+  },
+  {
+    "chunk_id": 433,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "or example, running HELMET at all lengths on a 70B model requires a node with 8 * 80GB GPUs for hundreds of GPU hours, which can"
+  },
+  {
+    "chunk_id": 434,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " be costly. \nBy evaluating on HELMET, researchers can directly compare their models to existing ones simply by referencing our r"
+  },
+  {
+    "chunk_id": 435,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "esults, which cover 59 models of different sizes and architectures.\nYou can find the leaderboard on our\nwebsite\n.\nLooking ahead\n"
+  },
+  {
+    "chunk_id": 436,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "HELMET is a step towards a more comprehensive evaluation of long-context language models, but there are still many more exciting"
+  },
+  {
+    "chunk_id": 437,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": " applications of LCLMs. \nFor example, we recently released\nLongProc\n, a benchmark for evaluating LCLMs on\nlong-form generation\na"
+  },
+  {
+    "chunk_id": 438,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "nd\nfollowing procedures\n, which are critical for developing reasoning models that generate tens of thousands of tokens in thinki"
+  },
+  {
+    "chunk_id": 439,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ng steps.\nAlthough summarization tasks have long outputs (up to 1K tokens), LongProc focuses on even longer outputs, up to 8K to"
+  },
+  {
+    "chunk_id": 440,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "kens. \nSimilar to HELMET, LongProc is also designed with reliable evaluation settings and diverse tasks. \nWe are working on inte"
+  },
+  {
+    "chunk_id": 441,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "grating LongProc into HELMET's evaluation suite, and we hope that this will provide a more comprehensive evaluation of LCLMs on "
+  },
+  {
+    "chunk_id": 442,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "long-form tasks.\nAcknowledgements\nWe thank Mengzhou Xia, Howard Chen, Xi Ye, Yinghui He, Lucy He, Alexander Wettig, Sadhika Mall"
+  },
+  {
+    "chunk_id": 443,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "adi, Adithya Bhaskar, Joie Zhang, and other members of the Princeton Language and Intelligence (PLI) group for their helpful fee"
+  },
+  {
+    "chunk_id": 444,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "dback.\nThis work is gratefully supported by the Microsoft Accelerate Foundation Models Research (AFMR) for Azure OpenAI credits "
+  },
+  {
+    "chunk_id": 445,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "and an Intel grant.\nCitation\nIf you find HELMET useful, please consider citing our paper:\n@inproceedings{yen2025helmet,\n      ti"
+  },
+  {
+    "chunk_id": 446,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "tle={HELMET: How to Evaluate Long-Context Language Models Effectively and Thoroughly}, \n      author={Howard Yen and Tianyu Gao "
+  },
+  {
+    "chunk_id": 447,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "and Minmin Hou and Ke Ding and Daniel Fleischer and Peter Izsak and Moshe Wasserblat and Danqi Chen},\n      year={2025},\n      b"
+  },
+  {
+    "chunk_id": 448,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ooktitle={International Conference on Learning Representations (ICLR)},\n}\nMore Articles from our Blog\nWelcome Gemma 3: Google's "
+  },
+  {
+    "chunk_id": 449,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "all new multimodal, multilingual, long context open LLM\nBy\nariG23498\nMarch 12, 2025\n•\n415\nFinally, a Replacement for BERT: Intro"
+  },
+  {
+    "chunk_id": 450,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "ducing ModernBERT\nBy\nbclavie\nDecember 19, 2024\nguest\n•\n631\nCommunity\nFranck-Dernoncourt\n28 days ago\nThanks for sharing! Another "
+  },
+  {
+    "chunk_id": 451,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "benchmark to evaluate long contexts:\nhttps://github.com/adobe-research/NoLiMa\n; paper:\nNoLiMa: Long-Context Evaluation Beyond Li"
+  },
+  {
+    "chunk_id": 452,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "teral Matching\nSee translation\nReply\nEdit\nPreview\nUpload images, audio, and videos by dragging in the text input, pasting, or\ncl"
+  },
+  {
+    "chunk_id": 453,
+    "entry_id": "4a648de6348b0cbf59c6e1ef59812903",
+    "text": "icking here\n.\nTap or paste here to upload images\nComment\n·\nSign up\nor\nlog in\nto comment\nUpvote\n27\n+15"
+  },
+  {
+    "chunk_id": 454,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "Back to Articles\n17 Reasons Why Gradio Isn't Just Another UI Library\nPublished\n\t\t\t\tApril 16, 2025\nUpdate on GitHub\nUpvote\n32\n+26"
+  },
+  {
+    "chunk_id": 455,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "\nysharma\nyuvraj sharma\nabidlabs\nAbubakar Abid\nIntroduction\n1.  Universal API Access\n2. Interactive API Recorder for Development\n"
+  },
+  {
+    "chunk_id": 456,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "3. Fast ML Apps with Server-Side Rendering\n4. Automatic Queue Management for ML Tasks\n5. High-Performance Streaming for Real-Tim"
+  },
+  {
+    "chunk_id": 457,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "e ML Outputs\n6. Integrated Multi-Page Application Support\n7. New Client-Side Function Execution With Groovy\n8. A Comprehensive T"
+  },
+  {
+    "chunk_id": 458,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "heming System and Modern UI Components\n9. Gradio's Dynamic Interfaces\n10. Visual Interface Development with Gradio Sketch\n11. Pr"
+  },
+  {
+    "chunk_id": 459,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ogressive Web App (PWA) Support\n12. In-Browser Execution with Gradio Lite\n13. Accelerated Development with AI-Assisted Tooling\n1"
+  },
+  {
+    "chunk_id": 460,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "4. Hassle-Free App Sharing\n15. Enterprise-Grade Security and Production Readiness\n16. Enhanced Dataframe Component\n17. Deep Link"
+  },
+  {
+    "chunk_id": 461,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "s for Sharing App States\nConclusion\nIntroduction\n\"Oh, Gradio? That's a Python library for building UIs, right?\"\nWe hear this a l"
+  },
+  {
+    "chunk_id": 462,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ot, and while Gradio does let you create interactive UIs with minimal Python code, calling Gradio a \"UI library\" misses the bigg"
+  },
+  {
+    "chunk_id": 463,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "er picture! Gradio is\nmore\nthan a UI library—it's a framework for\ninteracting with machine learning models\nthrough both UIs and "
+  },
+  {
+    "chunk_id": 464,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "APIs, providing strong guarantees around performance, security, and responsiveness.\nIn this article, we'll introduce features th"
+  },
+  {
+    "chunk_id": 465,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "at are unique to Gradio and explain how they are essential for building powerful AI applications. We'll share links to Gradio's "
+  },
+  {
+    "chunk_id": 466,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "official documentation and release notes, so you can explore further if you're curious.\n1.  Universal API Access\nAll Gradio apps"
+  },
+  {
+    "chunk_id": 467,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " are also APIs! When you build a Gradio app, you can also use Gradio's robust client libraries for programmatic access to these "
+  },
+  {
+    "chunk_id": 468,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "Gradio applications. We offer:\nOfficial SDKs in Python (gradio_client) and JavaScript (@gradio/client), plus support for cURL AP"
+  },
+  {
+    "chunk_id": 469,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "I access\nAutomatic generation of REST API endpoints for each event defined in your Gradio app\nAutomatically-generated API docume"
+  },
+  {
+    "chunk_id": 470,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ntation, accessible through the \"View API\" link\nClient libraries with advanced features like file handling, Hugging Face Space d"
+  },
+  {
+    "chunk_id": 471,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "uplication, and more\nFurther Reading:\nExplore Client Libraries\n,\nQuerying Gradio Apps with Curl\nWhat Sets Gradio Apart\n:\nMost ot"
+  },
+  {
+    "chunk_id": 472,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "her Python frameworks lack official API access mechanisms\nWhile traditional web frameworks require separate implementations for "
+  },
+  {
+    "chunk_id": 473,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "UI and API endpoints, Gradio automatically generates both from a single implementation, including documentation.\n2. Interactive "
+  },
+  {
+    "chunk_id": 474,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "API Recorder for Development\nGradio's \"API Recorder\" was introduced in version 4.26. This powerful development tool enables deve"
+  },
+  {
+    "chunk_id": 475,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "lopers to capture their UI interactions in real time and automatically generate corresponding API calls in Python or JavaScript."
+  },
+  {
+    "chunk_id": 476,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "\n\"API Recorder\" can be found on the \"View API\" page discussed above.\nIt helps in documenting API usage of Gradio applications th"
+  },
+  {
+    "chunk_id": 477,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "rough your own real examples\nFurther Reading:\nExplore API Recorder\nWhat Sets Gradio Apart:\nYou cannot easily script UI interacti"
+  },
+  {
+    "chunk_id": 478,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ons in this manner in most other Python and Web frameworks. This is a capability unique to Gradio in the ML tooling landscape.\nT"
+  },
+  {
+    "chunk_id": 479,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "he combination of API Recorder with Gradio Client libraries creates a smooth transition from UI exploration to development using"
+  },
+  {
+    "chunk_id": 480,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " API endpoints.\n3. Fast ML Apps with Server-Side Rendering\nGradio 5.0 introduced server-side rendering (SSR), changing how ML ap"
+  },
+  {
+    "chunk_id": 481,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "plications load and perform. While traditional UI frameworks rely on client-side rendering, Gradio's SSR:\nEliminates the loading"
+  },
+  {
+    "chunk_id": 482,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " spinner and significantly reduces initial page load times\nPre-renders the UI on the server, enabling immediate user interaction"
+  },
+  {
+    "chunk_id": 483,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "\nImproves SEO for published applications\nGets automatically enabled for Hugging Face Spaces deployments while remaining configur"
+  },
+  {
+    "chunk_id": 484,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "able for local development\nFurther Reading:\nRead more about Gradio 5's SSR\nWhat Sets Gradio Apart:\nTraditional Python UI framewo"
+  },
+  {
+    "chunk_id": 485,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "rks are limited to client-side rendering while implementing SSR in JS web frameworks requires extensive full-stack development e"
+  },
+  {
+    "chunk_id": 486,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "xpertise\nGradio delivers web framework-level performance while maintaining a pure Python development experience (Note: except fo"
+  },
+  {
+    "chunk_id": 487,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "r having to installing Node!)\n4. Automatic Queue Management for ML Tasks\nGradio provides a sophisticated queuing system tailored"
+  },
+  {
+    "chunk_id": 488,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " for ML applications that handles both GPU-intensive computations and high-volume user access.\nGradio's queue automatically hand"
+  },
+  {
+    "chunk_id": 489,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "les different kinds of tasks defined in your application, whether they are long predictions that run on a GPU, audio/video strea"
+  },
+  {
+    "chunk_id": 490,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ming, or non-ML tasks.\nYour applications can scale to thousands of concurrent users without resource contention and system overw"
+  },
+  {
+    "chunk_id": 491,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "helming\nReal-time queue status updates via Server-Side Events, showing users their current position in the queue.\nYou can config"
+  },
+  {
+    "chunk_id": 492,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ure concurrency limits for parallel processing of requests\nYou can even have different events pool resources through shared queu"
+  },
+  {
+    "chunk_id": 493,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "es using\nconcurrency_id\nFurther Reading:\nLearn about Queuing\n,\nExplore Concurrency Controls\nWhat Sets Gradio Apart:\nMost other P"
+  },
+  {
+    "chunk_id": 494,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ython frameworks don't offer resource management while running concurrent sessions. If you are using popular web frameworks, you"
+  },
+  {
+    "chunk_id": 495,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " might have to implement queuing system manually yourself.\nGradio's built-in queue management system eliminates the need for ext"
+  },
+  {
+    "chunk_id": 496,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ernal schedulers and allows you to build GPU-intensive or viral ML applications.\n5. High-Performance Streaming for Real-Time ML "
+  },
+  {
+    "chunk_id": 497,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "Outputs\nGradio's streaming capabilities enable real-time, low-latency updates crucial for modern ML applications. The framework "
+  },
+  {
+    "chunk_id": 498,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "provides:\nA simple developer experience: Gradio offers streaming through simple Python generators using\nyield\nstatements.\nThis s"
+  },
+  {
+    "chunk_id": 499,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "upports token-by-token text generation streaming, step-by-step image generation updates, or even smooth audio/video streaming vi"
+  },
+  {
+    "chunk_id": 500,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "a HTTP Live Streaming (HLS) protocol\nWebRTC/WebSocket API for real-time applications via\nFastRTC\nFurther Reading:\nImplementation"
+  },
+  {
+    "chunk_id": 501,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " guide\n,\nLearn more about Gradio 5's streaming improvements\nWhat Sets Gradio Apart:\nOther Python frameworks require manual threa"
+  },
+  {
+    "chunk_id": 502,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "d management and polling for streaming updates. Web frameworks similarly need custom WebSocket or WebRTC implementation for real"
+  },
+  {
+    "chunk_id": 503,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "-time streaming.\nYou can create real-time audio/video streaming applications entirely in Python with\nFastRTC\nand Gradio.\n6. Inte"
+  },
+  {
+    "chunk_id": 504,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "grated Multi-Page Application Support\nGradio has evolved beyond single-page applications with its native multi-page support, ena"
+  },
+  {
+    "chunk_id": 505,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "bling developers to build comprehensive AI/ML applications.\nYou can have multiple pages within a single application context\nGrad"
+  },
+  {
+    "chunk_id": 506,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "io provide automatic URL routing and navigation bar generation\nBackend resources, such as the queue, are shared across pages\nDev"
+  },
+  {
+    "chunk_id": 507,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "elopers can split code across multiple files while maintaining a single application context. This is good for file maintainabili"
+  },
+  {
+    "chunk_id": 508,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ty and testing.\nFurther Reading:\nExplore Multi-Page Apps\n,\nLearn about page organization\nWhat Sets Gradio Apart:\nOther Python fr"
+  },
+  {
+    "chunk_id": 509,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ameworks require separate scripts for each page, limiting state sharing among the pages. Popular Web frameworks also require exp"
+  },
+  {
+    "chunk_id": 510,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "licit routing setup.\nGradio offers automatic routing and navigation bar using simple Python declarations! This feature transform"
+  },
+  {
+    "chunk_id": 511,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "s Gradio from a demo platform into a robust web framework for building full-featured ML applications.\n7. New Client-Side Functio"
+  },
+  {
+    "chunk_id": 512,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "n Execution With Groovy\nGradio 5 introduces an automatic Python-to-JavaScript transpilation library called Groovy. This now enab"
+  },
+  {
+    "chunk_id": 513,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "les instant UI responsiveness without server roundtrips.\nPython functions can do simple UI updates directly within the browser w"
+  },
+  {
+    "chunk_id": 514,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ith\njs=True\nflag\nUsed mainly for immediate updates of various Component properties\nThis eliminates latency for simple UI interac"
+  },
+  {
+    "chunk_id": 515,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "tions\nReduces server load for basic interface updates. Especially useful for viral hosted apps or when using apps on high latenc"
+  },
+  {
+    "chunk_id": 516,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "y connections.\nEnables developers to write highly responsive applications without JavaScript expertise\nFurther Reading:\nRead abo"
+  },
+  {
+    "chunk_id": 517,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ut Client-Side Functions\nWhat Sets Gradio Apart:\nMost other Python frameworks require server roundtrips for all UI updates. Popu"
+  },
+  {
+    "chunk_id": 518,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "lar Web frameworks implement separate JavaScript codebase for client-side logic.\nGradio's automatic transpilation from Python to"
+  },
+  {
+    "chunk_id": 519,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " JavaScript provides a single-language development experience while delivering web-native performance—a combination not found in"
+  },
+  {
+    "chunk_id": 520,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " other frameworks.\n8. A Comprehensive Theming System and Modern UI Components\nGradio offers a sophisticated theming system that "
+  },
+  {
+    "chunk_id": 521,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "can transform your ML applications into polished, professional-looking interfaces.\nGradio has ready-to-use theme presets like Mo"
+  },
+  {
+    "chunk_id": 522,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "nochrome, Soft, Ocean, Glass etc. These themes have built-in dark mode support too.\nAll Gradio themes are automatically mobile r"
+  },
+  {
+    "chunk_id": 523,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "esponsive and we've made sure that your Gradio apps are automatically accessible for people using screen readers.\nGradio Compone"
+  },
+  {
+    "chunk_id": 524,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "nts come with ML-specific UI choices, for example, we provide Undo/Retry/Like buttons for chat interfaces, ImageEditor and Annot"
+  },
+  {
+    "chunk_id": 525,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "atedImage components for segmentation/masking use-cases, ImageSlider for image-to-image transformations, and so on\nGradio has re"
+  },
+  {
+    "chunk_id": 526,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "cently introduced enhanced UI features for Reasoning LLMs, Agents, Multistep Agents, Nested Thoughts, and Nested Agents within o"
+  },
+  {
+    "chunk_id": 527,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ur chat interfaces, elevating AI Agents to a first-class status in the chat UI.\nFurther Reading:\nExplore Gradio Themes\n,\nSee the"
+  },
+  {
+    "chunk_id": 528,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " UI Refresh\n,\nBuild UIs for Agents\nWhat Sets Gradio Apart:\nOther Python frameworks offer very limited color customization withou"
+  },
+  {
+    "chunk_id": 529,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "t comprehensive theming. You will have to implement theme management and CSS manually in all popular Web frameworks.\nWith Gradio"
+  },
+  {
+    "chunk_id": 530,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " ML practitioners can create professional-looking applications without web design expertise while maintaining the flexibility to"
+  },
+  {
+    "chunk_id": 531,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " implement custom branding when needed.\n9. Gradio's Dynamic Interfaces\nWith the introduction of the\n@gr.render()\ndecorator, the "
+  },
+  {
+    "chunk_id": 532,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "components and event listeners you define in your Gradio application are no longer fixed—you can add new components and listener"
+  },
+  {
+    "chunk_id": 533,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "s dynamically based on user interaction and state.\nYou can now render UI modifications on-the-fly based on model outputs or your"
+  },
+  {
+    "chunk_id": 534,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " workflow.\nPlease note that Gradio also provides a\n.render()\nmethod, which is distinct from the decorator. It allows rendering a"
+  },
+  {
+    "chunk_id": 535,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ny Gradio Block within another Block.\nFurther Reading:\nExplore the Render Decorator\n,\nSee Example of Dynamic Apps\nWhat Sets Grad"
+  },
+  {
+    "chunk_id": 536,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "io Apart:\nOther Python frameworks have very limited dynamic UI capabilities. Web frameworks require JavaScript for any sort of i"
+  },
+  {
+    "chunk_id": 537,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "nterface updates.\nGradio allows for dynamic UI manipulation. Developers can create sophisticated and responsive interfaces using"
+  },
+  {
+    "chunk_id": 538,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " simple Python.\n10. Visual Interface Development with Gradio Sketch\nGradio Sketch introduces a visual development environment th"
+  },
+  {
+    "chunk_id": 539,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "at brings to you a no-code ML application design interface. It is basically a WYSIWYG editor that helps you build your interface"
+  },
+  {
+    "chunk_id": 540,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " layout with Gradio components, define events, and attach functions to these events.\nYou can select and add components to your i"
+  },
+  {
+    "chunk_id": 541,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "nterface while getting a real-time preview of interface changes.\nYou can even visually add event listeners to your components. T"
+  },
+  {
+    "chunk_id": 542,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "he entire app code gets generated automatically from your visual interface designs.\nGradio Sketch includes a code generator feat"
+  },
+  {
+    "chunk_id": 543,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ure that allows you to create code for your inference functions.\nFurthermore, users can iterate over multiple prompts to get exa"
+  },
+  {
+    "chunk_id": 544,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ctly the code they want.\nFurther Reading:\nExplore Gradio Sketch\nWhat Sets Gradio Apart:\nYou are required to write code to build "
+  },
+  {
+    "chunk_id": 545,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "your layout for all other Python frameworks.\nGradio sketch reduces the learning curve for non-coders. It significantly accelerat"
+  },
+  {
+    "chunk_id": 546,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "es the application development process for everyone and thus helps democratize AI.\n11. Progressive Web App (PWA) Support\nGradio "
+  },
+  {
+    "chunk_id": 547,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "provides Progressive Web App capabilities. PWAs are web applications that are regular web pages or websites but can appear to th"
+  },
+  {
+    "chunk_id": 548,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "e user as installable platform-specific applications.\nYou can create ML applications for Mobile and Desktop without providing ex"
+  },
+  {
+    "chunk_id": 549,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "tra configurations.\nFurther Reading:\nLearn about PWA Support\nWhat Sets Gradio Apart:\nMost Other Python frameworks lack native PW"
+  },
+  {
+    "chunk_id": 550,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "A support. You will have to configure PWA in most of the popular web frameworks manually\nThis Gradio capability makes ML applica"
+  },
+  {
+    "chunk_id": 551,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "tions more accessible with broader user access. You can create a mobile app instantly with an icon of your choice without additi"
+  },
+  {
+    "chunk_id": 552,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "onal development effort.\n12. In-Browser Execution with Gradio Lite\nGradio Lite enables browser-side execution via Pyodide (WebAs"
+  },
+  {
+    "chunk_id": 553,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "sembly). You can build ML demos using client-side model inference services like Transformers.js and ONNX.\nEnhanced privacy (all "
+  },
+  {
+    "chunk_id": 554,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "data stays in the user's browser)\nZero server costs for deployment!\nOffline-capable model inference\nFurther Reading:\nExplore Gra"
+  },
+  {
+    "chunk_id": 555,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "dio Lite\n,\nLearn about Transformers.js integration\nWhat Sets Gradio Apart:\nMost other Python frameworks require continuous serve"
+  },
+  {
+    "chunk_id": 556,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "r operation. At the same time, popular Web frameworks need separate JavaScript implementations for the backend\nThere are static "
+  },
+  {
+    "chunk_id": 557,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "website platforms that don't need a server backend, but they offer very limited or basic interactivity\nGradio enables serverless"
+  },
+  {
+    "chunk_id": 558,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " deployment of Python ML applications. With Gradio Lite, even static file hosting services (like GitHub Pages) can host complete"
+  },
+  {
+    "chunk_id": 559,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " ML applications. Gradio Lite has uniquely positioned Gradio for on-device or on-the-edge ML application delivery\n13. Accelerate"
+  },
+  {
+    "chunk_id": 560,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "d Development with AI-Assisted Tooling\nGradio has introduced innovative features that dramatically speed up the ML application d"
+  },
+  {
+    "chunk_id": 561,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "evelopment cycle.\nGradio provides a hot reload capability for instant code updates in your Gradio UI during development.\nWe also"
+  },
+  {
+    "chunk_id": 562,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " offer\nAI Playground\nfor natural language-driven app generation.\nYou can rapidly prototype an app in a single line using integra"
+  },
+  {
+    "chunk_id": 563,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "tions with HuggingFace and\nInference providers\n. This is also achievable with any API endpoint that is compatible with OpenAI. Y"
+  },
+  {
+    "chunk_id": 564,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ou can accomplish all this by simply using gr.load()\nFurther Reading:\nRead about recent innovations with Gradio 5\n,\nPrototyping "
+  },
+  {
+    "chunk_id": 565,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "with Huggingface\nWhat Sets Gradio Apart:\nMost other Python frameworks would require a manual refresh for code updates while deve"
+  },
+  {
+    "chunk_id": 566,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "loping the app. The same goes for most Web frameworks—you need complex build pipelines and development servers.\nWith AI Playgrou"
+  },
+  {
+    "chunk_id": 567,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "nd Gradio offers instant UI feedback and AI-assisted development. This focus on rapid development and AI-assisted tooling enable"
+  },
+  {
+    "chunk_id": 568,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "s researchers and developers to create and modify ML applications quickly.\n14. Hassle-Free App Sharing\nOnce your Gradio app is r"
+  },
+  {
+    "chunk_id": 569,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "eady, you can share it without worrying about deployment or hosting complexity.\nYou can generate an instant public URL by simply"
+  },
+  {
+    "chunk_id": 570,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " setting one parameter:\ndemo.launch(share=True)\n. The application is accessible on a unique domain in the format\nxxxxx.gradio.li"
+  },
+  {
+    "chunk_id": 571,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ve\nwhile keeping your code and model running in your local environment\nThese share links have a 168-hour (1-week) timeout on Gra"
+  },
+  {
+    "chunk_id": 572,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "dio's official share server\nYou can generate an instant public URL by simply setting one parameter:\ndemo.launch(share=True)\n. Th"
+  },
+  {
+    "chunk_id": 573,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "e application is accessible on\n*.gradio.live\ndomain for 1 week.\nThe share link creates a secure TLS tunnel to your locally-runni"
+  },
+  {
+    "chunk_id": 574,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ng app through Gradio's share server using Fast Reverse Proxy (FRP)\nFor enterprise deployments or situations requiring custom do"
+  },
+  {
+    "chunk_id": 575,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "mains or additional security measures, you can host your own FRP server to avoid the 1-week timeout\nFurther Reading:\nLearn about"
+  },
+  {
+    "chunk_id": 576,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " Quick Sharing\n,\nShare Links and Share Servers\nWhat Sets Gradio Apart:\nOther Python frameworks require cloud deployment and lots"
+  },
+  {
+    "chunk_id": 577,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " of configuration for sharing your apps with public. For a Web framework, you'd need manual server setup and hosting.\nGradio off"
+  },
+  {
+    "chunk_id": 578,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ers instant sharing from your local development environment without creating any deployment pipeline, configuring a server for h"
+  },
+  {
+    "chunk_id": 579,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "osting, or any port forwarding. This gives immediate collaboration or demonstration capability to the community.\nWith over 5,000"
+  },
+  {
+    "chunk_id": 580,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " Gradio apps being shared through share links at any given time, this approach is ideal for quick prototyping and gathering imme"
+  },
+  {
+    "chunk_id": 581,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "diate feedback on your machine learning app\n15. Enterprise-Grade Security and Production Readiness\nGradio has evolved from a pro"
+  },
+  {
+    "chunk_id": 582,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "totyping tool to a production-ready framework with comprehensive security measures. Our recent enhancements include:\nThird-party"
+  },
+  {
+    "chunk_id": 583,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " security audits from Trail of Bits and vulnerability assessments of Gradio build applications.\nBased on the feedback received f"
+  },
+  {
+    "chunk_id": 584,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "rom our security auditors, we have hardened file handling and upload controls. We now have configurable security settings via in"
+  },
+  {
+    "chunk_id": 585,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "tuitive environment variables. For example, you can control file path access via GRADIO_ALLOWED_PATHS, and Server-side rendering"
+  },
+  {
+    "chunk_id": 586,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " through GRADIO_SSR_MODE\nFurther Reading:\nRead about Security Improvements\n,\nExplore Environment Variables\nWhat Sets Gradio Apar"
+  },
+  {
+    "chunk_id": 587,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "t:\nMost Other Python frameworks often focus on development scenarios over production security. Your typical Web frameworks provi"
+  },
+  {
+    "chunk_id": 588,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "de general security without ML-specific considerations.\nWith Gradio you get specialized security for ML deployment scenarios, pr"
+  },
+  {
+    "chunk_id": 589,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "otected file upload handling for ML model inputs, and sanitized model i/o processing.\nThese production-level improvements make G"
+  },
+  {
+    "chunk_id": 590,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "radio suitable for enterprise ML deployments while maintaining its simplicity for rapid development. The Gradio framework now pr"
+  },
+  {
+    "chunk_id": 591,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ovides robust security defaults while offering granular control for specific deployment requirements.\n16. Enhanced Dataframe Com"
+  },
+  {
+    "chunk_id": 592,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ponent\nGradio's updated dataframe component addresses common data visualization needs in ML applications with practical improvem"
+  },
+  {
+    "chunk_id": 593,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ents:\nMulti-cell selection\nRow numbers and column pinning for navigating large datasets\nSearch and filter functions for data exp"
+  },
+  {
+    "chunk_id": 594,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "loration\nStatic (non-editable) columns\nImproved accessibility with better keyboard navigation\nFurther Reading:\nIntroducing Gradi"
+  },
+  {
+    "chunk_id": 595,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "o's new Dataframe!\nWhat Sets Gradio Apart:\nOther frameworks typically require JavaScript libraries for similar functionality\nGra"
+  },
+  {
+    "chunk_id": 596,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "dio implements these features while maintaining a simple Python API\nThese improvements support practical ML workflows like data "
+  },
+  {
+    "chunk_id": 597,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "exploration and interactive dashboards\n17. Deep Links for Sharing App States\nGradio's\nDeep Links\nfeature allows users to capture"
+  },
+  {
+    "chunk_id": 598,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " and share the exact state of an application:\nShare your unique model outputs with others\nCreate snapshots of your app at specif"
+  },
+  {
+    "chunk_id": 599,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ic points in time\nImplement with a single\ngr.DeepLinkButton\ncomponent\nWorks with any public Gradio app (hosted or using\nshare=Tr"
+  },
+  {
+    "chunk_id": 600,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ue\n)\nFurther Reading:\nUsing Deep Links\nWhat Sets Gradio Apart:\nMost frameworks require custom state management code to achieve s"
+  },
+  {
+    "chunk_id": 601,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "imilar functionality\nDeep links work across all Gradio components automatically\nEnables sharing of generated output without addi"
+  },
+  {
+    "chunk_id": 602,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "tional implementation effort!\nConclusion\nGradio has evolved from a demo tool into an AI-focused framework that lets developers b"
+  },
+  {
+    "chunk_id": 603,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "uild complete web applications in Python without requiring web development expertise.\nThe innovations in Gradio 4 and 5, such as"
+  },
+  {
+    "chunk_id": 604,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " Python-to-JavaScript transpilation, built-in queuing for resource-intensive models, real-time audio-video streaming with FastRT"
+  },
+  {
+    "chunk_id": 605,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "C, and server-side rendering, provide capabilities that would otherwise require extensive implementation work in other framework"
+  },
+  {
+    "chunk_id": 606,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "s.\nBy handling infrastructure concerns like API endpoint generation, security vulnerabilities, and queue management, Gradio enab"
+  },
+  {
+    "chunk_id": 607,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "les ML practitioners to concentrate on model development while still delivering polished user interfaces. The Gradio framework s"
+  },
+  {
+    "chunk_id": 608,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "upports both rapid prototyping and production deployment scenarios through the same Python code base.\nWe invite you to\ntry Gradi"
+  },
+  {
+    "chunk_id": 609,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "o\nfor your next ML project and experience firsthand why it's much more than just another UI library. Whether you're a researcher"
+  },
+  {
+    "chunk_id": 610,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": ", developer, or ML enthusiast, Gradio provides tools for everyone.\nExplore Gradio's capabilities!\nMore Articles from our Blog\nHo"
+  },
+  {
+    "chunk_id": 611,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "w to Build an MCP Server with Gradio\nBy\nabidlabs\nApril 30, 2025\n•\n105\nJourney to 1 Million Gradio Users!\nBy\nabidlabs\nApril 4, 20"
+  },
+  {
+    "chunk_id": 612,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "25\n•\n29\nCommunity\nsdasdkhgfdsa\n29 days ago\nHi which version of torch are you using here\nhttps://huggingface.co/spaces/ysharma/Ma"
+  },
+  {
+    "chunk_id": 613,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ke_Custom_Voices_With_KokoroTTS/tree/main\nI always having this error\nmodels.py\", line 365, in build_model\nfor key, state_dict in"
+  },
+  {
+    "chunk_id": 614,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": " torch.load(path, map_location='cuda', weights_only=False)['net'].items():\nFile \".pyenv/versions/3.10.16/lib/python3.10/site-pac"
+  },
+  {
+    "chunk_id": 615,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "kages/torch/serialization.py\", line 1040, in load\nreturn _legacy_load(opened_file, map_location, pickle_module, **pickle_load_ar"
+  },
+  {
+    "chunk_id": 616,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "gs)\nFile \".pyenv/versions/3.10.16/lib/python3.10/site-packages/torch/serialization.py\", line 1262, in _legacy_load\nmagic_number "
+  },
+  {
+    "chunk_id": 617,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "= pickle_module.load(f, **pickle_load_args)\n_pickle.UnpicklingError: invalid load key, 'v'.\nSee translation\nReply\nlatentbroadcas"
+  },
+  {
+    "chunk_id": 618,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "ting\n18 days ago\nIs it possible to go deep into the CSS or the styling to have a more fine-grained control of the aesthetics? I "
+  },
+  {
+    "chunk_id": 619,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "like Gradio and its robustness but I would like to give my app a very distinct style and user experience\nSee translation\nReply\ny"
+  },
+  {
+    "chunk_id": 620,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "sharma\nArticle author\n18 days ago\nyes, absolutely.\nReply\nEdit\nPreview\nUpload images, audio, and videos by dragging in the text i"
+  },
+  {
+    "chunk_id": 621,
+    "entry_id": "75f8ad042596bf3d6c3863a4a9292ff7",
+    "text": "nput, pasting, or\nclicking here\n.\nTap or paste here to upload images\nComment\n·\nSign up\nor\nlog in\nto comment\nUpvote\n32\n+20"
+  }
+]

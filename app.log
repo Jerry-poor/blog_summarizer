@@ -369,3 +369,160 @@
 2025-04-25 17:26:01,910 - INFO - Report 生成器启动 for date: 2025-04-16
 2025-04-25 17:26:01,926 - INFO - 已生成日报：E:\blog_summerizer\reports\2025-04-16-summary.md
 2025-04-25 17:26:01,926 - INFO - Report 生成器完成
+2025-05-19 13:35:33,730 - INFO - Report 生成器启动 for date: 2025-05-19
+2025-05-19 13:35:33,730 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 13:35:33,730 - INFO - 未生成 2025-05-19 的日报
+2025-05-19 13:35:33,730 - INFO - Report 生成器完成
+2025-05-19 13:41:10,064 - INFO - Report 生成器启动 for date: 2025-04-16
+2025-05-19 13:41:10,080 - INFO - 已生成日报：E:\blog_summarizer\reports\2025-04-16-summary.md
+2025-05-19 13:41:10,080 - INFO - Report 生成器完成
+2025-05-19 13:55:43,375 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 13:55:45,409 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 13:55:45,409 - INFO - Scraper finished
+2025-05-19 13:55:45,702 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 13:55:45,702 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 13:56:02,085 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 13:56:02,085 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 13:56:02,085 - INFO - 无切块，跳过索引构建
+2025-05-19 13:56:03,045 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:00:37,332 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:00:39,718 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:00:39,718 - INFO - Scraper finished
+2025-05-19 14:00:40,023 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:00:40,024 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:00:49,032 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:00:49,033 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:00:49,034 - INFO - 无切块，跳过索引构建
+2025-05-19 14:00:49,956 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:00:53,900 - ERROR - FAISS 索引或元数据文件不存在: E:\blog_summarizer\index\2025-05-19_faiss.index, E:\blog_summarizer\index\2025-05-19_meta.json
+2025-05-19 14:00:54,287 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:00:56,142 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:00:56,142 - INFO - Scraper finished
+2025-05-19 14:00:56,421 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:00:56,421 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:01:05,561 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:01:05,562 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:01:05,564 - INFO - 无切块，跳过索引构建
+2025-05-19 14:01:06,446 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:01:06,446 - ERROR - FAISS 索引或元数据文件不存在: E:\blog_summarizer\index\2025-05-19_faiss.index, E:\blog_summarizer\index\2025-05-19_meta.json
+2025-05-19 14:15:22,758 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:15:24,599 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:15:24,599 - INFO - Scraper finished
+2025-05-19 14:15:24,921 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:15:24,922 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:15:34,309 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:15:34,311 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:15:34,312 - INFO - 无切块，跳过索引构建
+2025-05-19 14:15:35,288 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:15:41,643 - ERROR - 索引或元数据不存在：E:\blog_summarizer\index\2025-05-19_faiss.index, E:\blog_summarizer\index\2025-05-19_meta.json
+2025-05-19 14:15:42,048 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:15:43,903 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:15:43,903 - INFO - Scraper finished
+2025-05-19 14:15:44,201 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:15:44,201 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:15:53,519 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:15:53,520 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:15:53,522 - INFO - 无切块，跳过索引构建
+2025-05-19 14:15:54,448 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:15:54,448 - ERROR - 索引或元数据不存在：E:\blog_summarizer\index\2025-05-19_faiss.index, E:\blog_summarizer\index\2025-05-19_meta.json
+2025-05-19 14:16:43,203 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:16:45,100 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:16:45,100 - INFO - Scraper finished
+2025-05-19 14:16:45,380 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:16:45,380 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:16:49,016 - ERROR - 索引或元数据不存在：E:\blog_summarizer\index\2025-05-19_faiss.index, E:\blog_summarizer\index\2025-05-19_meta.json
+2025-05-19 14:16:49,436 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:16:52,093 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:16:52,093 - INFO - Scraper finished
+2025-05-19 14:16:52,390 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:16:52,390 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:16:54,452 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:16:54,452 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:16:54,452 - INFO - 无切块，跳过索引构建
+2025-05-19 14:16:55,402 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:17:00,310 - ERROR - 索引或元数据不存在：E:\blog_summarizer\index\2025-05-19_faiss.index, E:\blog_summarizer\index\2025-05-19_meta.json
+2025-05-19 14:17:00,727 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:17:01,684 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:17:01,684 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:17:01,684 - INFO - 无切块，跳过索引构建
+2025-05-19 14:17:02,368 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:17:02,368 - INFO - Scraper finished
+2025-05-19 14:17:02,661 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:17:02,661 - ERROR - 索引或元数据不存在：E:\blog_summarizer\index\2025-05-19_faiss.index, E:\blog_summarizer\index\2025-05-19_meta.json
+2025-05-19 14:17:02,665 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:17:02,665 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:17:11,918 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:17:11,918 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:17:11,918 - INFO - 无切块，跳过索引构建
+2025-05-19 14:17:12,882 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:17:12,882 - ERROR - 索引或元数据不存在：E:\blog_summarizer\index\2025-05-19_faiss.index, E:\blog_summarizer\index\2025-05-19_meta.json
+2025-05-19 14:20:43,563 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:20:45,153 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:20:45,153 - INFO - Scraper finished
+2025-05-19 14:20:45,450 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:20:45,450 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:20:54,530 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:20:54,530 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:20:54,530 - INFO - 无切块，跳过索引构建
+2025-05-19 14:20:55,438 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:21:30,962 - ERROR - 索引或元数据不存在：E:\blog_summarizer\index\2025-04-16_faiss.index, E:\blog_summarizer\index\2025-04-16_meta.json
+2025-05-19 14:21:31,371 - INFO - Scraper started for date: 2025-04-16
+2025-05-19 14:21:36,171 - INFO - Saved entry: E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-05-19 14:21:38,498 - INFO - Saved entry: E:\blog_summarizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-05-19 14:21:40,077 - INFO - Saved entry: E:\blog_summarizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-05-19 14:21:40,078 - INFO - Scraper finished
+2025-05-19 14:21:40,381 - INFO - Summarizer started for date: 2025-04-16
+2025-05-19 14:21:49,163 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2025-05-19 14:22:17,192 - INFO - Saved summary: E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7_summary.json
+2025-05-19 14:22:34,095 - INFO - Saved summary: E:\blog_summarizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3_summary.json
+2025-05-19 14:23:54,240 - ERROR - 索引或元数据不存在：E:\blog_summarizer\index\2025-04-16_faiss.index, E:\blog_summarizer\index\2025-04-16_meta.json
+2025-05-19 14:23:54,645 - INFO - Scraper started for date: 2025-04-16
+2025-05-19 14:23:59,065 - INFO - Saved entry: E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json
+2025-05-19 14:24:04,382 - INFO - Saved entry: E:\blog_summarizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3.json
+2025-05-19 14:24:08,909 - INFO - Saved entry: E:\blog_summarizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903.json
+2025-05-19 14:24:08,914 - INFO - Scraper finished
+2025-05-19 14:24:09,202 - INFO - Summarizer started for date: 2025-04-16
+2025-05-19 14:24:18,612 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
+2025-05-19 14:24:28,218 - INFO - Saved summary: E:\blog_summarizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903_summary.json
+2025-05-19 14:24:28,218 - INFO - Summarizer finished
+2025-05-19 14:24:37,387 - INFO - Chunker/Indexer 启动 for date 2025-04-16
+2025-05-19 14:24:37,403 - INFO - 共收集到 622 切块
+2025-05-19 14:24:40,337 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyD4iZPYkyQQJ03WJPNMsOAcUt2_GUJ5yA8
+2025-05-19 14:24:41,169 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyD4iZPYkyQQJ03WJPNMsOAcUt2_GUJ5yA8
+2025-05-19 14:24:42,887 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyD4iZPYkyQQJ03WJPNMsOAcUt2_GUJ5yA8
+2025-05-19 14:24:42,897 - INFO - Saved summary: E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7_summary.json
+2025-05-19 14:25:01,939 - INFO - Saved summary: E:\blog_summarizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3_summary.json
+2025-05-19 14:25:30,582 - INFO - Saved summary: E:\blog_summarizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903_summary.json
+2025-05-19 14:25:30,582 - INFO - Summarizer finished
+2025-05-19 14:25:40,490 - INFO - Chunker/Indexer 启动 for date 2025-04-16
+2025-05-19 14:25:40,505 - INFO - 共收集到 584 切块
+2025-05-19 14:26:38,132 - INFO - Embedding 完成，维度=768
+2025-05-19 14:26:38,179 - INFO - Embedding 完成，维度=768
+2025-05-19 14:26:38,399 - INFO - GPU 上已添加 584 个向量
+2025-05-19 14:26:38,399 - INFO - GPU 上已添加 622 个向量
+2025-05-19 14:26:38,445 - INFO - 已将索引保存到 E:\blog_summarizer\index\2025-04-16_faiss.index
+2025-05-19 14:26:38,461 - INFO - 已将索引保存到 E:\blog_summarizer\index\2025-04-16_faiss.index
+2025-05-19 14:26:38,508 - INFO - 已保存元数据到 E:\blog_summarizer\index\2025-04-16_meta.json（共 584 条）
+2025-05-19 14:26:38,524 - INFO - 已保存元数据到 E:\blog_summarizer\index\2025-04-16_meta.json（共 622 条）
+2025-05-19 14:26:38,555 - INFO - Chunker/Indexer 完成
+2025-05-19 14:26:38,581 - INFO - Chunker/Indexer 完成
+2025-05-19 14:26:39,898 - INFO - 已生成日报：E:\blog_summarizer\reports\2025-04-16-summary.md
+2025-05-19 14:26:39,934 - INFO - 已生成日报：E:\blog_summarizer\reports\2025-04-16-summary.md
+2025-05-19 14:28:34,624 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:28:36,254 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:28:36,254 - INFO - Scraper finished
+2025-05-19 14:28:36,615 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:28:36,615 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:28:46,360 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:28:46,361 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:28:46,363 - INFO - 无切块，跳过索引构建
+2025-05-19 14:28:47,344 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:35:01,474 - INFO - Scraper started for date: 2025-05-19
+2025-05-19 14:35:03,528 - INFO - No blog entries to save for date: 2025-05-19
+2025-05-19 14:35:03,528 - INFO - Scraper finished
+2025-05-19 14:35:03,825 - INFO - Summarizer started for date: 2025-05-19
+2025-05-19 14:35:03,825 - INFO - 未找到目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:35:13,044 - INFO - Chunker/Indexer 启动 for date 2025-05-19
+2025-05-19 14:35:13,045 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
+2025-05-19 14:35:13,046 - INFO - 无切块，跳过索引构建
+2025-05-19 14:35:14,014 - INFO - 没有找到数据目录：E:\blog_summarizer\data\2025-05-19
