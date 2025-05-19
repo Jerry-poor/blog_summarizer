@@ -487,9 +487,9 @@
 2025-05-19 14:24:28,218 - INFO - Summarizer finished
 2025-05-19 14:24:37,387 - INFO - Chunker/Indexer 启动 for date 2025-04-16
 2025-05-19 14:24:37,403 - INFO - 共收集到 622 切块
-2025-05-19 14:24:40,337 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyD4iZPYkyQQJ03WJPNMsOAcUt2_GUJ5yA8
-2025-05-19 14:24:41,169 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyD4iZPYkyQQJ03WJPNMsOAcUt2_GUJ5yA8
-2025-05-19 14:24:42,887 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyD4iZPYkyQQJ03WJPNMsOAcUt2_GUJ5yA8
+2025-05-19 14:24:40,337 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=Afefef
+2025-05-19 14:24:41,169 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIefefefe
+2025-05-19 14:24:42,887 - ERROR - 摘要失败：E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7.json，错误：429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzefe8fe
 2025-05-19 14:24:42,897 - INFO - Saved summary: E:\blog_summarizer\data\2025-04-16\75f8ad042596bf3d6c3863a4a9292ff7_summary.json
 2025-05-19 14:25:01,939 - INFO - Saved summary: E:\blog_summarizer\data\2025-04-16\083b5505811e9c85b194ea4d085583a3_summary.json
 2025-05-19 14:25:30,582 - INFO - Saved summary: E:\blog_summarizer\data\2025-04-16\4a648de6348b0cbf59c6e1ef59812903_summary.json
